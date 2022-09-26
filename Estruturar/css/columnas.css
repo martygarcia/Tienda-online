@@ -1,0 +1,70 @@
+div div {
+    margin-top: 1.5vh;
+    border: 1px solid hsl(0, 0%, 0%);
+}
+
+.five-colums {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 5;
+}
+
+.five-colums div {
+    width: 17%;
+    height: 2vh;
+}
+
+.four-colums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.four-colums div {
+    width: 22%;
+    height: 2vh;
+}
+
+.three-colums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-colums div {
+    width: 30%;
+    height: 2vh;
+}
+
+.two-colums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-colums div {
+    width: 49%;
+    height: 2vh;
+}
+
+.two-colums-aside {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-colums-aside div {
+    width: 80%;
+    height: 2vh;
+}
+
+.two-colums-aside .two-colums-aside-item {
+    width: 19%;
+    height: 2vh;
+}
+
+.colum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum div {
+    width: 100%;
+    height: 2vh;
+}

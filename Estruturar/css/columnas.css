@@ -1,70 +1,65 @@
-div div {
-    margin-top: 1.5vh;
-    border: 1px solid hsl(0, 0%, 0%);
-}
 
-.five-colums {
+.five-columns {
     display: flex;
     justify-content: space-between;
-    flex-grow: 5;
 }
 
-.five-colums div {
+.five-columns > div {
     width: 17%;
-    height: 2vh;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.four-colums {
+.four-columns {
     display: flex;
     justify-content: space-between;
 }
 
-.four-colums div {
+.four-columns > div {
     width: 22%;
-    height: 2vh;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.three-colums {
+.three-columns {
     display: flex;
     justify-content: space-between;
 }
 
-.three-colums div {
-    width: 30%;
-    height: 2vh;
+.three-columns > div {
+    width: 29%;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.two-colums {
+.two-columns {
     display: flex;
     justify-content: space-between;
 }
 
-.two-colums div {
-    width: 49%;
-    height: 2vh;
+.two-columns > div {
+    width: 48%;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.two-colums-aside {
+.two-columns-aside {
     display: flex;
     justify-content: space-between;
 }
 
-.two-colums-aside div {
-    width: 80%;
-    height: 2vh;
+.two-columns-aside > div {
+    width: 78%;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.two-colums-aside .two-colums-aside-item {
+.two-columns-aside > .column-aside {
     width: 19%;
-    height: 2vh;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
-.colum {
+.column {
     display: flex;
     justify-content: space-between;
 }
 
-.colum div {
+.column > div {
     width: 100%;
-    height: 2vh;
+    border: solid 1px hsl(0, 0%, 0%) ;
 }

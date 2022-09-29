@@ -10,81 +10,185 @@
             <title>Título</title>
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
             <meta name="keywords"    content="palabras clave, separadas, por comas">
-         
-            <link href="style/app.css" rel="stylesheet"> 
+            <link href="css/columnas.css" rel="stylesheet"> 
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/normalize.css"> 
         </head>
     
        
         <body>
-    
+
             <header>
-                <div class="colum">
+                <div class="two-columns">
                     <!-- Logo -->
-                    <div class="two-colums">
-                        <div></div>
-                        <div></div>
+                    <div class="column">
+                        <div class="logo-items">
+                            <div class="header-logo-item-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="header-logo-item-text">
+                                Logo
+                            </div>
+                        </div>
                     </div>
-                    <!-- Menu -->
-                    <div class="three-colums">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="column">
+                        <div class="header-menu-items">
+                            <ul>
+                                <li>Inico</li>
+                                <li>Reserva</li>
+                                <li>Contacto</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </div>  
             </header>
     
             <main>
-                <div class="two-colums checkout-items">
-                    <div class="checkout-title"></div>
-                    <!-- Parte furmulario -->
-                    <div>
-                        <div class="two-colums checkout-form">
-                            <div class="pay-form-item-name">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="checkout-form-item-surnames">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="checkout-form-item-surnames">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="checkout-form-item-surnames">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="checkout-form-item-surnames">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="checkout-form-item-surnames">
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <!-- Parte de boton  -->
-                        <div class="two-colums">
-                            <div class="buy-resum-items">
-                                <div class="buy-resum-title"></div>
-                                <div class="buy-resum-IVA"></div>
-                                <div class="buy-resum-transport"></div>
-                                <div class="but-resum-total"></div>
-                            </div>
-                            <div class="buy-method"></div>
-                            <div>
-                                <div class="custom-button"></div>
-                            </div>
-                        </div>
+                <div class="checkout">
+                    <div class="page-title">
+
                     </div>
-                </div>    
+                    <div class="checkout-items"></div>
+                    <div class="two-columns">
+                        <form>
+                            <div class="column"> 
+                                <div class="two-columns custom-form">
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Nombre</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Apellidos</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Telefono</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Email</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Ciudad</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Codigo postal</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
+                                            <label for="">Direccion</label>
+                                        </div>
+                                        <div class="custom-form-item-input">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <!-- Boton -->
+                                <div class="contact-button">
+                                    <button class="custom-button"></button>
+                                </div>
+                            </div>
+                            </div>
+                            <!-- Parte furmulario -->
+                          
+                            <div class="column">
+                                <div class="resume-cart">
+                                    <div class="buy-resum-title">
+                                        <span>Resum de la compra</span>
+                                    </div>
+                                    <div class="buy-resum-items">
+                                        <div class="buy-resum-item">
+                                            <div class="buy-resum-item-title">
+                                                <span>IVA</span>
+                                            </div>
+                                            <div class="buy-resum-item-value">
+                                                <span>10€</span>
+                                            </div>
+                                        </div>
+                                        <div class="buy-resum-item">
+                                            <div class="buy-resum-item-title">
+                                                <span>Transporte</span>
+                                            </div>
+                                            <div class="buy-resum-item-value">
+                                                <span>0€</span>
+                                            </div>
+                                        </div>
+                                        <div class="buy-resum-item">
+                                            <div class="buy-resum-item-title">
+                                                <span>Total</span>
+                                            </div>
+                                            <div class="buy-resum-item-value">24€</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!-- Parte de botones  -->
+                                <div class="buy-method">
+                                    <div class="radio-input">
+                                        <input type="radio">
+                                        <label for="">Transferencia bancaria</label>
+                                    </div>
+                                    <div class="radio-input">
+                                        <input type="radio">
+                                        <label for="">Paypal</label>
+                                    </div>
+                                    <div class="radio-input">
+                                        <input type="radio">
+                                        <label for="">Targeta de credito</label>
+                                    </div>
+                                </div>
+
+                                <div class="custom-button">
+                                    <button class="custom-button">Pagar</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        
+                    </div>    
+                </div>
+                
             </main>
     
             <footer>
-                <div class="colum">
-                    <div></div>
-                    <div></div>
+                <div class="column">
+                    <div class="footer-items">
+                        <div class="footer-copyrigth">
+                            <p>©2048</p>
+                        </div>
+                        <div class="footer-text">
+                            enlace
+                        </div>
+                    </div>
                 </div>
             </footer>
               

@@ -10,63 +10,115 @@
             <title>Título</title>
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
             <meta name="keywords"    content="palabras clave, separadas, por comas">
-         
-            <link href="style/app.css" rel="stylesheet"> 
+            <link href="css/columnas.css" rel="stylesheet"> 
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/normalize.css">
         </head>
     
        
         <body>
     
             <header>
-                <div class="colum">
+                <div class="two-columns">
                     <!-- Logo -->
-                    <div class="two-colums">
-                        <div></div>
-                        <div></div>
+                    <div class="column">
+                        <div class="logo-items">
+                            <div class="header-logo-item-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="header-logo-item-text">
+                                Logo
+                            </div>
+                        </div>
                     </div>
-                    <!-- Menu -->
-                    <div class="three-colums">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="column">
+                        <div class="header-menu-items">
+                            <ul>
+                                <li>Inico</li>
+                                <li>Reserva</li>
+                                <li>Contacto</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </div>  
             </header>
     
             <main>
-                <div class="two-colums">
-                    <!-- Parte slider -->
-                    <div class="slider-galery-items">
-                        <div class="galery-slider-imgs">
-                            <div class="galery-slider-img-main"></div>
-                            <div class="galery-slider-img-miniature"></div>
-                            <div class="galery-slider-img-miniature"></div>
-                            <div class="galery-slider-img-miniature"></div>
-                            <div class="galery-slider-img-miniature"></div>
-                        </div>
-                    </div>
-                    <!-- Parte texto -->
-                    <div class="colum product-text-info">
-                        <div class="product-text-info-title"></div>
-                        <div class="product-item-text-description"></div>
-                        <div class="product-item-text-description"></div>
-                        <div>
-                            <div class="two-clolums">
-                                <div class="amount-items">
-                                    <div class="amount-item-text"></div>
-                                    <div class="amount-item-button"></div>
+                <div class="product">
+                    <div class="two-columns">
+                        <!-- Parte slider -->
+                        <div class="column slider-galery-items">
+                            <div class="galery-slider-imgs">
+    
+                                <div class="galery-slider-img-main">
+                                    <img src="img/producto/galery-camiseta1.webp" alt="">
+                                </div>
+    
+                                <div class="galery-slider-img-miniatures">
+                                    <div class="five-columns">
+                                        <div class="galery-slider-img-miniature">
+                                            <img src="img/producto/galery-camiseta2.webp" alt="">
+                                        </div>
+                                        <div class="galery-slider-img-miniature">
+                                            <img src="img/producto/galery-camiseta2.webp" alt="">
+                                        </div>
+                                        <div class="galery-slider-img-miniature">
+                                            <img src="img/producto/galery-camiseta3.webp" alt="">
+                                        </div>
+                                        <div class="galery-slider-img-miniature">
+                                            <img src="img/producto/galery-camiseta3.webp" alt="">
+                                        </div>
+                                        <div class="galery-slider-img-miniature">
+                                            <img src="img/producto/galery-camiseta4.webp" alt="">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="custom-button"></div>
+                        <!-- Parte texto -->
+                        <div class="product-text-info">
+                            <div class="column">
+                                <div class="product-text-info-title">
+                                    <h3>Camiseta</h3>
+                                </div>
+                                <div class="product-item-text-price">30€</div>
+                                <div class="product-item-text-description"> 
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sint, quas eius laboriosam illo incidunt quisquam suscipit ipsam itaque quia amet atque autem fugiat ad deleniti explicabo at! Consequatur, excepturi.</p>
+                                </div>
+                                <div class="product-item-amount">
+                                    <div class="amount-items">
+                                        <div class="amount-item-text">
+                                            <span>Cantidad del producto</span>
+                                        </div>
+                                        <div class="amount-item-plus-minus-button">
+                                            <div class="amount-item-minus"></div>
+                                            <div class="amount-item-input"></div>
+                                            <div class="amount-item-plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-add-to-cart">
+                                    <button class="custom-button">
+                                        comprar
+                                    </button>
+                                </div>
+                            </div>
+                           
+                        </div>
                     </div>
                 </div>
             </main>
     
             <footer>
-                <div class="colum">
-                    <div></div>
-                    <div></div>
+                <div class="column">
+                    <div class="footer-items">
+                        <div class="footer-copyrigth">
+                            <p>©2048</p>
+                        </div>
+                        <div class="footer-text">
+                            enlace
+                        </div>
+                    </div>
                 </div>
             </footer>
               

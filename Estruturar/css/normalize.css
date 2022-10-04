@@ -267,6 +267,7 @@ a:hover, a:focus {
 
 .five-columns{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;  
 }
@@ -277,6 +278,7 @@ a:hover, a:focus {
 
 .four-columns{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
@@ -287,6 +289,7 @@ a:hover, a:focus {
 
 .three-columns{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
@@ -297,6 +300,7 @@ a:hover, a:focus {
 
 .two-columns{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }

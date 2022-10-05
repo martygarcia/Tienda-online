@@ -175,7 +175,7 @@ footer {
 }
 
 .featured-title span {
-    margin-top: 4re m;
+    margin-top: 4rem;
     font-family: 'Alkalami', serif;
     font-size: 4rem;
     font-weight: 50px;
@@ -422,6 +422,7 @@ footer {
 .how-much {
     font-size: 30px;
     color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }
 
 .row-img {
@@ -454,27 +455,55 @@ footer {
 
 /* resum buy */
 
-.resum-cart {
-
+.resum-buy {
+    margin-top: 4rem;
+    margin-left: 66%;
+    display: flex;
+    width: 20%;
+    border: 2px solid white;
 }
 
-.buy-resum-items {
-
+.resum-title {
+    font-size: 20px;
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.7rem;
 }
 
-.buy-resum-item {
-
+.resum-title span {
 }
 
-.buy-resum-item-title {
-
+.resum-text {
+    color: hsl(0, 0%, 100%);
+    margin-top: 0.5rem;
 }
 
-.buy-resum-item-value {
-
+.resum-text span {
+    margin-left: 35%;
 }
 
+.resum-input {
+    color: hsl(0, 0%, 100%);
+    margin-top: 0.5rem;
+}
 
+.resum-input span{
+    margin-left: 30%;
+}
+
+.line {
+    width: 208%;
+    border-top: solid 2px white;
+}
+
+.resum-buttons {
+    margin-top: 3rem;
+    margin-left: 70%;
+}
+
+.resum-buttons button {
+    margin-right: 20%;
+}
 
 /* resum buy */
 
@@ -482,32 +511,44 @@ footer {
 /* finalizar-compra */
 
 .checkout {
-    
+    background-color: hsl(0, 3%, 14%);
 }
 
-.page-title {
-
+.checkout-title {
+    text-align: center;
+    padding: 1rem;
 }
 
-.custom-form {
-
+.checkout h1 {
+    font-size: 60px;
 }
 
-.custom-form-item {
+.column-checkout {
+    margin-left: 2%;
+    border-right: 3px solid white;
+} 
 
+.custom-form-input-item-input {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    margin-bottom: 0.5rem;
 }
 
-.custom-form-item-input {
-
+.custom-form-input-item-input input {
+    padding: 0.2em 31%;
 }
 
-.custom-form-item-input {
-
+.move-checkout {
+    margin-left: 10%;
 }
 
-.contact-button {
-
+.resum-buy-checkout {width: 23px;
 }
+
+.move-resum-buy-checkout {
+    margin-right: 100%;
+}
+
  /* ridio */
 
 .buy-method {

@@ -6,7 +6,6 @@
 
 .five-columns > div {
     width: 17%;
-    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
 .four-columns {
@@ -16,7 +15,6 @@
 
 .four-columns > div {
     width: 22%;
-    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
 .three-columns {
@@ -44,12 +42,10 @@
 
 .two-columns-aside > div {
     width: 78%;
-    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
 .two-columns-aside > .column-aside {
     width: 19%;
-    border: solid 1px hsl(0, 0%, 0%) ;
 }
 
 .column {
@@ -59,5 +55,4 @@
 
 .column > div {
     width: 100%;
-    border: solid 1px hsl(0, 0%, 0%) ;
 }

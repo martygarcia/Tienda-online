@@ -293,6 +293,22 @@ footer {
 
  /* productos grid */
 
+.products-grid-filter {
+    width: 120%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.grid-filter-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.grid-filter-select select{
+    padding: 0.4rem ;
+    font-size: 1.3rem;
+}
+
 .products-grid-items {
     margin-left: auto;
     width: 90%;
@@ -395,19 +411,19 @@ footer {
 }
 
 .row-product {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 25px;
     color: hsl(0, 0%, 100%);
 }
 
 .row-price {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 25px;
     color: hsl(0, 0%, 100%);
 }
 
 .row-button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     color: hsl(0, 0%, 100%);
 }
 

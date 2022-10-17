@@ -21,6 +21,7 @@
 }
 
 .custom-button-input {
+    text-align: center;
     width: 20%;
 }
 
@@ -30,70 +31,71 @@
 }
 
 
-/* button + - */
-
+/* header */
 
 header {   
     background-color: hsl(0, 3%, 14%);
     color: white;
+    height: 5vh;
+    padding: 0.5rem 2%;
+    width: 96%;
 }
-
-/* header */
 
 .logo-items {
     display: flex;
+    height: 100%;
 }
 
-.header-logo-item-img {   
-    margin-top: 0.5rem;
-    margin-left: 2%;
+.header-logo-item-img {  
+    align-items: center; 
+    margin-right: 1rem;
 }
 
+/* A los svg se les dá width y height con rem */
 .header-logo-item-img svg {
-    color: ;
-    height: 4.5vh
+    height: 3rem;
+    width: 3rem;
 }
 
+/* Font-weight es un valor de 30, 400, 600 */
+/* Font-size lo expresamos en rem*/
+/* La combinación de height 100% habiendo dicho que el padre (header) debe tener 5 vh, junto a 
+la propiedad align-items permite centrar un elemento dentro de la caja*/
 .header-logo-item-text { 
-    margin-top: 1rem;
-    font-size: 40px;
-    font-weight: 50px;
+    align-items: center;
+    height: 100%;
+    font-size: 2.5rem;
+    font-weight: 600;
     font-family: 'Alkalami', serif;
 }
 
-.header-menu-items {
-
+/*La combinación de un tamaño de width más pequeño que 100% hace que sobre espacio dentro de la caja
+que le contiene, por eso al hacer margin-left: auto la caja se desplaza totalmente a la derecha ya que 
+utiliza todo el espacio sobrante como margen*/
+.header-menu-items{
+    height: 100%;
+    margin-left: auto;
+    width: 30%;
 }
 
 .header-menu-items ul {
+    align-items: center;
+    height: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .header-menu-items ul li {
     font-size: 20px;
-    margin-top: 1rem;
-    margin-right: 2%;
 }
 
-/* header */
-
-body {
-    
-}
-
-main {
-    
-}
 
 /* footer */
 footer {
     background-color: hsl(0, 3%, 14%);
     color: hsl(0, 0%, 100%);
-}
-
-.footer-items {
+    padding: 2rem 0;
 }
 
 .footer-copyrigth span {
@@ -108,22 +110,23 @@ footer {
 
 
 /* index */
-/* slider */
 
 .home{
     background-color: hsl(0, 3%, 14%);
 }
 
+/* slider */
+
 .home-slider-items {
     width: 100%;
 }
 
-.slider-items {
-}
-
 .slider-item-text {
     left: 5%;
-    top: 35rem;
+    top: 40vh;
+    background-color: hsla(0, 0%, 0%, 0.494);
+    padding: 0.5rem 1rem;
+    padding-top: 2rem;
     position: absolute;
     z-index: 1000;
 }
@@ -139,29 +142,22 @@ footer {
 }
 
 .slider-item-img img {
-    
     width: 100%;
 }
 
 .slider-item-button {
-    left: 17%;
-    top: 42rem;
+    left: 5%;
+    top: 60vh;
     z-index: 900;
     position: absolute;
 }
 
-
-.slider-item-button button {
-}
-
-.custom-button {
-
-}
 /* slider */
+
 /* featured */
 
 .featured {
-    margin-left: 5%;
+    margin: 0 auto;
     width: 90%;
     background-color: hsl(0, 3%, 14%);
 }
@@ -178,7 +174,7 @@ footer {
 .featured h2 {
     text-align: center;
     margin-bottom: 0.5rem;
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 .featured div {
@@ -189,48 +185,31 @@ footer {
     margin-top: 4rem;
     font-family: 'Alkalami', serif;
     font-size: 4rem;
-    font-weight: 50px;
+    font-weight: 600;
     color: hsl(0, 0%, 100%);
 }
 
-
-.featured-item-img img {
-
-}
-
-.featured-item-info-img {
-}
-
-.featured-item-title span {
-} 
-
-.featured-item-description {
-}
 /* featured */
 /* banner */
 
 .banner {
     background-color: hsl(0, 3%, 14%);
-}
-
-.banner-text-items {
+    margin: 0 auto;
     margin-top: 2rem;
+    width: 90%;
 }
 
 .banner-text-text p{
     margin-top: 3rem;
-    font-size: 20px;
-    margin-left: 10%;
+    font-size: 1.5rem;
 }
 
 .banner-text-img img {
     margin-top: 1rem;
-    margin-left: 35%;
-    width: 30%;
 }
 
 /* banner */
-/* index */
+
 /* productos */
 
 /* slider */
@@ -238,24 +217,8 @@ footer {
 .product {
     background-color: hsl(0, 3%, 14%);
     height: 90vh;
-}
-
-.slider-galery-items {
-}
-
-
-.slider-galery-img-main {
-}
-
-.galery-slider-img-main img  {
-    position: relative;
-    left: -18%;
-    width: 60%;
-    margin-left: 30%;
-}
-
-.galery-slider-imgs {
-    margin-left: 5%;
+    padding: 2rem 5%;
+    width: 90%;
 }
 
 .galery-slider-img-miniatures {
@@ -270,7 +233,6 @@ footer {
 
 .product-text-info {
     color: hsl(0, 0%, 100%);
-    margin-right: 5%;
 }  
 
 .product-text-info div {
@@ -295,20 +257,13 @@ footer {
     justify-content: space-between;
 }
 
-.amount-items {
-
-}
-
 .amount-item-text {
     font-size: 18px;
+    margin-right: 1rem;
 }
 
 .amount-item-text span {
     margin-top: 0.2rem;
-}
-
-.product-add-to-cart {
-
 }
 
 /* producto */
@@ -318,11 +273,11 @@ footer {
 
 .products {
     background-color: hsl(0, 3%, 14%);
-    
- }
+    padding: 2rem 5%;
+    width: 90%;
+}
 
 .products-category-items {
-    margin-left: 15%;
     color: hsl(0, 0%, 100%);
 }
 
@@ -338,23 +293,9 @@ footer {
 
  /* productos grid */
 
-.products {
-    padding-top: 5vh;
-} 
-
-.products-top-bar-items {
-
-}
-
-.products-top-bar-text {
-}
-
-.products-category-filter {
-}
-
 .products-grid-items {
-    margin-left: 5%;
-    width: 85%;
+    margin-left: auto;
+    width: 90%;
 }
 
 .products-grid-item {
@@ -365,31 +306,27 @@ footer {
     width: 100%;    
 }
 
+/* Para centrar el texto dentro de la caja text-align center*/
 .products-grid-description {
     padding: 1rem;
     background-color: hsl(0, 3%, 25%);
     color: hsl(0, 0%, 100%);
     font-size: 18px;
-    
+    text-align: center;
 }
 
-.products-grid-description span {
-    margin-left: 35%;
-}
-
+/* Cuando tenemos un boton clickable curson: pointer*/
 .products-grid-see {
+    cursor: pointer;
     padding: 1rem;
     color: hsl(0, 0%, 100%);
     font-size: 20px;
-    background-image: linear-gradient(to right top, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
-    border-top: 2px solid hsl(0, 3%, 14%);
+    background-image: linear-gradient(to right bottom, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
     margin-bottom: 2rem;
     text-decoration: underline;
+    text-align: center;
 }
 
-.products-grid-see span {
-    margin-left: 35%;
-}
  /* productos grid */
 
  /* productos */
@@ -531,7 +468,6 @@ footer {
 .custom-button-trolley {
     width: 30%;
 }
- 
 
 /* resum buy */
 
@@ -541,6 +477,8 @@ footer {
 .checkout {
     background-color: hsl(0, 3%, 14%);
     height: 90vh;
+    width: 90%;
+    padding: 0 5%;
 }
 
 .checkout-title {
@@ -554,7 +492,6 @@ footer {
 }
 
 .column-checkout {
-    margin-left: 2%;
     border-right: 3px solid white;
 } 
 
@@ -569,22 +506,25 @@ footer {
 }
 
 .move-checkout {
-    margin-left: 10%;
 }
 
+
+
 .resum-buy-checkout {
-    margin-top: 5rem;
-    height: 15vh;
+    margin-top: 4rem;
+    height: 16vh;
     border: 2px solid white;
 }
 
 .resum-checkout-title {
-    padding: 0.5rem 13rem;
+    text-align: center;
+    padding: 0.5rem;
     background-color: hsl(0, 0%, 100%);
 }
 
 .resum-checkout-text {
     margin-top: 0.5rem;
+    text-align: center;
 }
 
 .resum-checkout-input {
@@ -597,7 +537,6 @@ footer {
 }
 
 .resum-checkout-text span {
-    margin-left: 40%;
     font-size: 20px;
     color: hsl(0, 0%, 100%);
 }
@@ -633,6 +572,8 @@ footer {
 .contact {
     background-color: hsl(0, 3%, 14%);
     height: 100vh;
+    padding: 0 5%;
+    width: 90%;
 }
 
 .page-title h1 {
@@ -647,7 +588,6 @@ footer {
 
 .contact-options-item {
     margin-top: 5vh;
-    margin-left: 17%;
     color: hsl(0, 0%, 100%);
     display: flex;
     justify-content: flex-start;
@@ -657,28 +597,17 @@ footer {
     margin-top: 0.2rem;
 }
 
-.contact-options-item-text span {
-    margin-left: 6rem;
+.contact-options-item-text {
     font-size: 40px;
 }
 
 /* formulario */
-
-.contact-form  {
-    margin-top: 8vh;
+.custom-form  {
+    margin-top: 3vh;
 }
 
-.custom-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.custom-form-item {
+.custom-form-items {
     margin-bottom: 1rem;
-}
-
-.custom-form-item:nth-child(2) {
-    margin-left: 30%;
 }
 
 .custom-form-item-text {
@@ -686,12 +615,11 @@ footer {
     font-size: 25px;
     margin-bottom: 0.5rem;
 }
+
 .custom-form-item-input input{
-    padding: 0.5em 50%;
-}
-
-.custom-form-textarea-item {
-
+    color: #000;
+    padding: 0.5em;
+    width: 100%;
 }
 
 .custom-form-textarea-item-text {
@@ -706,7 +634,9 @@ footer {
 }
 
 .custom-form-textarea-item-input textarea{  
-    width: 84%;  
+    height: 20vh;
+    padding: 0.5rem;
+    width: 100%;  
 }
 
 /* formulario */

@@ -18,10 +18,8 @@
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="css/normalize.css"> 
         </head>
-    
-       
+        
         <body>
-
             <header>
                 <div class="two-columns">
                     <!-- Logo -->
@@ -33,14 +31,14 @@
                                 </svg>
                             </div>
                             <div class="header-logo-item-text">
-                                Title
+                                <span>Title</span>
                             </div>
                         </div>
                     </div>
                     <div class="column">
                         <div class="header-menu-items">
                             <ul>
-                                <li>Inico</li>
+                                <li>Inicio</li>
                                 <li>Reserva</li>
                                 <li>Contacto</li>
                             </ul>
@@ -54,31 +52,35 @@
                         <div class="checkout-title">
                             <h1>Finalizar compra</h1>
                         </div>
-                        <div class="two-columns two-columns-checkout">
                             <!-- Parte furmulario -->
-                        <div class="column column-checkout"> 
-                            <div class="contact-form column-che">
-                                <div class="custom-form">
-                                    <div class="custom-form-item move-checkout">
-                                        <div class="custom-form-item-text">
-                                            <label for="">Nombre</label>
-                                        </div>
-                                        <div class="custom-form-item-input">
-                                            <input type="text">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="custom-form">
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="custom-form-items">
+                                            <div class="custom-form-item-text">
+                                                <label for="">Nombre</label>
+                                            </div>
+                                            <div class="custom-form-item-input">
+                                                <input type="text">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="custom-form-item move-checkout">
-                                        <div class="custom-form-item-text">
-                                            <label for="">Apellidos</label>
-                                        </div>
-                                        <div class="custom-form-item-input">
-                                            <input type="text">
+                                    <div class="column">
+                                        <div class="custom-form-items">
+                                            <div class="custom-form-item-text">
+                                                <label for="">Apellidos</label>
+                                            </div>
+                                            <div class="custom-form-item-input">
+                                                <input type="text">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="two-colums">
-                                    <div class="custom-form">
-                                        <div class="custom-form-item move-checkout">
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="custom-form-items">
                                             <div class="custom-form-item-text">
                                                 <label for="">Telefono</label>
                                             </div>
@@ -86,7 +88,9 @@
                                                 <input type="text">
                                             </div>
                                         </div>
-                                        <div class="custom-form-item move-checkout">
+                                    </div>
+                                    <div class="column">
+                                        <div class="custom-form-items">
                                             <div class="custom-form-item-text">
                                                 <label for="">Email</label>
                                             </div>
@@ -96,9 +100,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="two-colums">
-                                    <div class="custom-form">
-                                        <div class="custom-form-item move-checkout">
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="custom-form-items">
                                             <div class="custom-form-item-text">
                                                 <label for="">Ciudad</label>
                                             </div>
@@ -106,7 +110,9 @@
                                                 <input type="text">
                                             </div>
                                         </div>
-                                        <div class="custom-form-item">
+                                    </div>
+                                    <div class="column">
+                                        <div class="custom-form-items">
                                             <div class="custom-form-item-text">
                                                 <label for="">Codigo postal</label>
                                             </div>
@@ -114,70 +120,82 @@
                                                 <input type="text">
                                             </div>
                                         </div>
-                                    </div>             
+                                    </div>
                                 </div>
                                 <div class="column">
-                                    <div class="custom-form-textarea-item move-checkout">
-                                        <div class="custom-form-textarea-item-text ">
+                                    <div class="custom-form-item">
+                                        <div class="custom-form-item-text">
                                             <label for="">Direccion</label>
                                         </div>
-                                        <div class="custom-form-input-item-input">
+                                        <div class="custom-form-item-input">
                                             <input type="text">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                    <section class="resum-buy-checkout">
-                        <div class="resum-checkout-title">
-                            <span>Resumen de la compra</span>
+                        <div class="column">
+                            <section class="resum-buy-checkout">
+                                <div class="resum-checkout-title">
+                                    <span>Resumen de la compra</span>
+                                </div>
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="resum-checkout-text">
+                                            <span>IVA</span>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="resum-checkout-input">
+                                            <span>20€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="resum-checkout-text">
+                                            <span>Transporte</span>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="resum-checkout-input">
+                                            <span>0€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="resum-checkout-text">
+                                            <span>Total</span>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="resum-checkout-input">
+                                            <span>30€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pay method -->
+                                <div class="buy-method">
+                                    <div class="input-transferencia">
+                                        <input type="radio">
+                                        <label for="">Transferencia Bancaria</label>
+                                    </div>
+                                    <div class="input-paypal">
+                                        <input type="radio">
+                                        <label for="">Paypal</label>
+                                    </div>
+                                    <div class="input-credit-cart">
+                                        <input type="radio">
+                                        <label for="">Tarjeta de credito</label>
+                                    </div>
+                                    <div class="container.custom-button">
+                                        <button class="custom-button">Pagar</button>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                        <div class="two-columns">
-                            <div class="resum-checkout-text">
-                                <span>IVA</span>
-                            </div>
-                            <div class="resum-checkout-input">
-                                <span>20€</span>
-                            </div>
-                        </div>
-                        <div class="two-columns">
-                            <div class="resum-checkout-text">
-                                <span>Transporte</span>
-                            </div>
-                            <div class="resum-checkout-input">
-                                <span>0€</span>
-                            </div>
-                        </div>
-                        <div class="two-columns">
-                            <div class="resum-checkout-text">
-                                <span>Total</span>
-                            </div>
-                            <div class="resum-checkout-input">
-                                <span>30€</span>
-                            </div>
-                        </div>
-                        <!-- pay method -->
-                        <div class="buy-method">
-                            <div class="input-transferencia">
-                                <input type="radio">
-                                <label for="">Transferencia Bancaria</label>
-                            </div>
-                            <div class="input-paypal">
-                                <input type="radio">
-                                <label for="">Paypal</label>
-                            </div>
-                            <div class="input-credit-cart">
-                                <input type="radio">
-                                <label for="">Tarjeta de credito</label>
-                            </div>
-                            <div class="container.custom-button">
-                                <button class="custom-button">Pagar</button>
-                            </div>
-                        </div>
-                    </section>>    
-                        
-               </div>
+                    </div>
             </main>
     
             <footer>
@@ -192,7 +210,6 @@
                     </div>
                 </div>
             </footer>
-              
         </body>
     
     </html>

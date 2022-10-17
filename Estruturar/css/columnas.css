@@ -1,58 +1,69 @@
+/* Columns */
 
-.five-columns {
+.five-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;  
 }
 
-.five-columns > div {
-    width: 17%;
-}
+.five-columns > .column{
+    width: 18%;
+}  
 
-.four-columns {
+.four-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
-.four-columns > div {
+.four-columns > .column{
     width: 22%;
 }
 
-.three-columns {
+.three-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
-.three-columns > div {
-    width: 29%;
+.three-columns > .column{
+    width: 30%;
 }
 
-.two-columns {
+.two-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
-.two-columns > div {
+.two-columns > .column{
     width: 48%;
 }
 
-.two-columns-aside {
+.two-columns-aside{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.two-columns-aside > div {
-    width: 78%;
+.two-columns-aside > .column-aside{
+    width: 20%;
 }
 
-.two-columns-aside > .column-aside {
-    width: 19%;
+.two-columns-aside > .column-main{
+    width: 75%;
 }
 
-.column {
+.one-column{
+    width: 100%;
+}
+
+.one-column > .column{
     display: flex;
-    justify-content: space-between;
-}
-
-.column > div {
+    flex-direction: column;
     width: 100%;
 }

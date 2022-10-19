@@ -1,0 +1,57 @@
+.products-grid-filter {
+    width: 120%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.grid-filter-text {
+    color: $secondary-color;
+    font-size: 1.5rem;
+}
+
+.grid-filter-select{
+    select {
+    padding: 0.4rem ;
+    font-size: 1.3rem;
+    }
+}
+
+.products-grid-items {
+    margin-left: auto;
+    width: $main-position-x;
+}
+
+.products-grid-item {
+    position: relative;
+}
+
+.products-grid-img{
+    img {
+        width: 100%;
+    }
+}
+
+/* Para centrar el texto dentro de la caja text-align center*/
+.products-grid-description {
+    padding: 1rem;
+    background-color: $primary-color-light;
+    color: $secondary-color;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Cuando tenemos un boton clickable curson: pointer*/
+.products-grid-see {
+    cursor: pointer;
+    padding: 1rem;
+    color: $secondary-color;
+    font-size: 20px;
+    background-image: linear-gradient(to right bottom, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
+    margin-bottom: 2rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.products-grid-see:hover {
+    @include custom-bounceY(1s,100);
+}

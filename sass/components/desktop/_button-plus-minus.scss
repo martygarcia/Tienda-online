@@ -1,0 +1,19 @@
+.amount-item-plus-minus-button {
+    display: flex;
+
+
+    .custom-button-minus {
+        border-radius: 0;
+        padding: 0.1rem 7%;
+    }
+
+    .custom-button-input {
+        text-align: center;
+        width: 20%;
+    }
+
+    .custom-button-plus {
+        border-radius: 0;
+        padding: 0.3rem 7%;
+    }
+}

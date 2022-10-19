@@ -1,0 +1,32 @@
+.featured {
+    margin: 0 auto;
+    width: $main-position-x;
+    background-color: $primary-color;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 3rem;
+    }
+
+    div {
+        margin-top: 0.3rem;
+    }
+
+    .featured-items {
+        font-family: $font-title;
+        color: white;
+
+        .featured-title {
+            margin-top: 1rem;
+
+            span {
+                margin-top: 4rem;
+                font-family: $font-title;
+                font-size: 4rem;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+        }
+    }
+}

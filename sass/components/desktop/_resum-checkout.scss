@@ -1,0 +1,36 @@
+.resum-buy-checkout {
+    margin-top: 4rem;
+    height: 16vh;
+    border: 2px solid $secondary-color;
+}
+
+.resum-checkout-title {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: $secondary-color;
+}
+
+.resum-checkout-text {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.resum-checkout-input {
+    margin-top: 0.5rem;
+}
+
+.resum-checkout-title span {
+    font-size: 22px;
+    color: $primary-color;
+}
+
+.resum-checkout-text span {
+    font-size: 20px;
+    color: $secondary-color;
+}
+
+.resum-checkout-input span {
+    margin-left: 40%;
+    color: $secondary-color;
+    font-size: 20px;
+}

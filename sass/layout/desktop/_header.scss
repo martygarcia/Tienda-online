@@ -1,0 +1,58 @@
+header {   
+    background-color: $primary-color;
+    color: $secondary-color;
+    height: 5vh;
+    padding: 0.5rem 2%;
+    width: 96%;
+}
+
+    .logo-items {
+        display: flex;
+        height: 100%;
+    }
+
+    .header-logo-item-img {  
+        align-items: center; 
+        margin-right: 1rem;
+
+        svg {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    /* A los svg se les dá width y height con rem */
+    
+
+    /* Font-weight es un valor de 30, 400, 600 */
+    /* Font-size lo expresamos en rem*/
+    /* La combinación de height 100% habiendo dicho que el padre (header) debe tener 5 vh, junto a 
+    la propiedad align-items permite centrar un elemento dentro de la caja*/
+    .header-logo-item-text { 
+        align-items: center;
+        height: 100%;
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $font-title;
+    }
+
+    /*La combinación de un tamaño de width más pequeño que 100% hace que sobre espacio dentro de la caja
+    que le contiene, por eso al hacer margin-left: auto la caja se desplaza totalmente a la derecha ya que 
+    utiliza todo el espacio sobrante como margen*/
+    .header-menu-items{
+        height: 100%;
+        margin-left: auto;
+        width: 30%;
+    }
+
+    ul {
+        align-items: center;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            font-size: 20px;
+        }
+    }

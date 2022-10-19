@@ -1,0 +1,18 @@
+.banner {
+    background-color: $primary-color;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: $main-position-x;
+
+    .banner-text-text p{
+        margin-top: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .banner-text-img img {
+        margin-top: 1rem;
+    }
+}
+
+
+

@@ -1,0 +1,43 @@
+.home-slider-items {
+    width: 100%;
+}
+
+.slider-item-text {
+    left: 5%;
+    top: 40vh;
+    background-color: hsla(0, 0%, 0%, 0.494);
+    padding: 0.5rem 1rem;
+    padding-top: 2rem;
+    position: absolute;
+    z-index: 1000;
+}
+
+.slider-item-text span {
+    font-size: 5rem;
+    font-family: $font-title;
+    color: $secondary-color;
+}
+
+.slider-item-img {
+    width: 100%;
+}
+
+.slider-item-img img {
+    width: 100%;
+}
+
+.slider-item-button {
+    left: 5%;
+    top: 60vh;
+    z-index: 900;
+    position: absolute;
+}
+
+.slider-item-button {
+    
+    button {
+        border-radius: 0;
+        width: 17rem;
+        font-size: 1.5rem;
+    }
+}

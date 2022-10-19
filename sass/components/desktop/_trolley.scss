@@ -1,0 +1,49 @@
+
+.trolley {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trolley-products {
+    font-size: 30px;
+    color: $secondary-color;
+
+}
+
+.price {
+    font-size: 30px;
+    color: $secondary-color;
+}
+
+.how-much {
+    font-size: 30px;
+    color: $secondary-color;
+}
+
+.row-img {
+    font-size: 30px;
+    color: $secondary-color;
+    width: 20%;
+}
+
+.row-img img {
+    margin-left: 200%;
+    width: 100%;
+}
+
+.row-product {
+    margin-top: 4rem;
+    font-size: 25px;
+    color: $secondary-color;
+}
+
+.row-price {
+    margin-top: 4rem;
+    font-size: 25px;
+    color: $secondary-color;
+}
+
+.row-button {
+    margin-top: 4rem;
+    color: $secondary-color;
+}

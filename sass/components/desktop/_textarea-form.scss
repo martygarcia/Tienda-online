@@ -1,0 +1,36 @@
+.custom-form {
+    margin-top: 3vh;
+}
+
+.custom-form-items {
+    margin-bottom: 1rem;
+}
+
+.custom-form-item-text {
+    color: $secondary-color;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.custom-form-item-input input{
+    color: hsl(0, 0%, 0%);
+    padding: 0.5em;
+    width: 100%;
+}
+
+.custom-form-textarea-item-text {
+    
+    color: $secondary-color;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.custom-form-textarea-item {
+    margin-bottom: 1rem;
+}
+
+.custom-form-textarea-item-input textarea{  
+    height: 20vh;
+    padding: 0.5rem;
+    width: 100%;  
+}

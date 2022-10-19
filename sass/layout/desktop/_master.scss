@@ -1,0 +1,146 @@
+// home
+
+.home{
+    background-color: $primary-color;
+}
+
+// categorias 
+
+
+.products {
+    background-color: $primary-color;
+    padding: 2rem 5%;
+    width: $main-position-x;
+}
+
+.products-category-items {
+    color: $secondary-color;
+}
+
+.products-category-title {
+    
+    h2 {
+    font-size: 3.5rem;
+    }
+}
+
+.category-ul {
+
+    ul {
+    display: block;
+
+        li {
+            font-size: 2rem;
+        }
+    }
+}
+
+// checkout
+
+.checkout {
+    background-color: $primary-color;
+    height: $main-position-y;
+    width: $main-position-x;
+    padding: 0 5%;
+}
+
+.checkout-title {
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+
+.checkout h1 {
+    font-size: 60px;
+}
+
+.column-checkout {
+    border-right: 3px solid $secondary-color;
+} 
+
+// form
+
+.custom-form-input-item-input {
+    color: h$secondary-color;
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+}
+
+.custom-form-input-item-input input {
+    padding: 0.2em 31%;
+}
+
+
+// contacto
+
+.contact {
+    background-color: $primary-color;
+    height: $main-position-y;
+    padding: 0 5%;
+    width: $main-position-x;
+}
+
+.page-title h1 {
+    padding: 1rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.contact-options-items {
+    margin-left: 10%;
+    margin-top: 6vh;
+}
+
+.contact-options-item {
+    margin-top: 5vh;
+    color: $secondary-color;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contact-options-item-text {
+    margin-left: 3rem;
+    margin-top: -0.1rem;
+}
+
+.contact-options-item-text {
+    font-size: 40px;
+}
+
+// producto 
+
+.product {
+    background-color: $primary-color;
+    height: $main-position-y;
+    padding: 2rem 5%;
+    width: $main-position-x;
+}
+
+// trolley
+
+.trolley-line {
+    margin-left: 20%;
+    padding: 2px 200%;
+    margin-top: 3rem;
+    border-bottom: 1px solid $secondary-color;
+}
+
+.row-products {
+    margin-top: 2rem;
+}
+
+
+.cart {
+    background-color: $primary-color;
+    height: $main-position-y;
+}
+
+.cart-title {
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+}

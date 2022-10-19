@@ -1,0 +1,26 @@
+//z-index
+$z-index-featured-image: 1000;
+$z-index-slider-image: 1000;
+$z-index-featured-elements: 1001;
+$z-index-slider-elements: 1001;
+$z-index-header: 5000;
+$z-index-header-menu: 5000;
+$z-index-overlay: 5001;
+$z-index-spinner: 5002;
+
+//typography
+$font-title: 'Alkalami', serif;
+$font-stack: "Ubuntu", sans-serif;
+$font-stack-condensed: "Ubuntu Condensed", sans-serif;
+
+// position
+$main-position-x: 90%;
+$main-position-y: 100vh;
+
+//colors
+$primary-color: hsl(0, 3%, 14%);
+$primary-color-light: hsl(0, 3%, 25%);
+$secondary-color: hsl(0, 0%, 100%);
+
+//style
+$text-border: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;

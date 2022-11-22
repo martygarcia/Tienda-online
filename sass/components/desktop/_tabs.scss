@@ -1,0 +1,33 @@
+.four-columns > .column{
+    width: 24.5%;
+}
+
+.tabs-container {
+    width: 100%;
+
+    .title-tabs-container {
+        .title-tabs {
+            background-color: #333333;
+            text-align: center;
+            padding: 1rem 20%;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            border: solid 2px black;
+        }
+
+        .title-tabs:hover {
+            color: #777;
+        }
+    }
+
+    .info-tabs-container {
+        
+        .info-tabs{
+            display: none;
+        } 
+
+        .info-tabs-active {
+            display: inline;
+        }
+    }
+}

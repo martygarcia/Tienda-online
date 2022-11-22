@@ -824,7 +824,6 @@ footer .footer-text span {
 }
 
 .products-grid-filter {
-  width: 120%;
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -832,6 +831,7 @@ footer .footer-text span {
 .grid-filter-text {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.5rem;
+  padding: 1rem 0.5%;
 }
 
 .grid-filter-select select {
@@ -1103,6 +1103,31 @@ footer .footer-text span {
   height: 20vh;
   padding: 0.5rem;
   width: 100%;
+}
+
+.four-columns > .column {
+  width: 24.5%;
+}
+
+.tabs-container {
+  width: 100%;
+}
+.tabs-container .title-tabs-container .title-tabs {
+  background-color: #333333;
+  text-align: center;
+  padding: 1rem 20%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border: solid 2px black;
+}
+.tabs-container .title-tabs-container .title-tabs:hover {
+  color: #777;
+}
+.tabs-container .info-tabs-container .info-tabs {
+  display: none;
+}
+.tabs-container .info-tabs-container .info-tabs-active {
+  display: inline;
 }
 
 /*# sourceMappingURL=app.css.map */

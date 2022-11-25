@@ -702,6 +702,7 @@ footer .footer-text span {
 }
 
 .custom-button {
+  cursor: pointer;
   box-shadow: 1px 1px 2px hsla(0deg, 0%, 100%, 0.213);
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 15px;
@@ -766,10 +767,10 @@ footer .footer-text span {
 .custom-form .custom-form-items .custom-form-textarea-item-text {
   color: hsl(0deg, 0%, 100%);
   font-size: 25px;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
-.custom-form .custom-form-items .custom-form-textarea-item {
-  margin-bottom: 1rem;
+.custom-form .custom-form-items custom-form-textarea-item .custom-form-textarea-item {
+  margin-top: 4rem;
 }
 .custom-form .custom-form-items .custom-form-textarea-item-input textarea {
   height: 20vh;
@@ -1090,6 +1091,7 @@ footer .footer-text span {
 }
 
 .custom-form-textarea-item-text {
+  margin-top: 2rem;
   color: hsl(0deg, 0%, 100%);
   font-size: 2rem;
   margin-bottom: 0.5rem;

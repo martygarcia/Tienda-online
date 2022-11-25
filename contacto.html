@@ -15,9 +15,9 @@
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
             <meta name="keywords"    content="palabras clave, separadas, por comas">
             <link rel="stylesheet" href="style/app.css">
+            <script type="module" src="js/index.js"></script>
         </head>
-    
-       
+        
         <body>
 
             <header>
@@ -113,7 +113,7 @@
                         
                         <!-- Parte furmulario -->
                         <div class="column"> 
-                            <div class="contact-form">
+                            <form class="contact-form">
                                 <div class="two-columns">
                                     <div class="column">
                                         <div class="custom-form">
@@ -125,7 +125,7 @@
                                                 </div>
                                                 <div class="column">
                                                     <div class="custom-form-item-input">
-                                                        <input type="text">
+                                                        <input class="name-form" type="text">
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,7 +137,7 @@
                                                 <label for="">Apellidos</label>
                                             </div>
                                             <div class="custom-form-item-input">
-                                                <input type="text">
+                                                <input class="apellidos-form" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -170,22 +170,35 @@
                                     <div class="custom-form-textarea-item">
                                         <div class="custom-form-textarea-item-text">
                                             <label for="">Mensaje</label>
+                                            <span class="counter"></span>
                                         </div>
-                                        <div class="custom-form-textarea-item-input">
-                                            <textarea name="" id=""></textarea>
+                                        <div class="custom-form-textarea-item-input" data-validacion="textarea">
+                                            <textarea placeholder="Escribe maximo 250 cartacteres" maxlength="250"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Boton -->
                                 <div class="contact-button">
-                                    <button class="custom-button">Enviar</button>
+                                    <button class="custom-button send-form-button">Enviar</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </main>
     
+            let form = document.querySelector('form');
+            let formInputs = form.elements;
+            let contactFormButton = document.querySelector('send-form-button')
+        
+            for (let i = 0; i <  formInputs.length; i++) {
+        
+                contactFormButton.addEventListener('click', event => {
+                    event.preventDefault();
+                    console.log(formInputs[i].value);
+                });
+            }
+
             <footer>
                 <div class="column">
                     <div class="footer-items">
@@ -198,7 +211,7 @@
                     </div>
                 </div>
             </footer>
-              
+
         </body>
     
     </html>

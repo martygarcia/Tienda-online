@@ -1110,23 +1110,44 @@ footer .footer-text span {
 }
 
 .tabs-container {
-  width: 100%;
+  width: 95%;
 }
-.tabs-container .title-tabs-container .title-tabs {
+.tabs-container .tabs {
+  cursor: pointer;
   background-color: #333333;
   text-align: center;
-  padding: 1rem 20%;
+  padding: 0.7rem 20%;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   border: solid 2px black;
+  margin-bottom: -2rem;
 }
-.tabs-container .title-tabs-container .title-tabs:hover {
+.tabs-container .tabs:hover {
   color: #777;
 }
-.tabs-container .info-tabs-container .info-tabs {
+.tabs-container .tabs.active {
+  margin-top: 0.2rem;
+  color: #777;
+  border-bottom: rgba(0, 0, 0, 0.11);
+}
+.tabs-container .info-tabs-container {
+  margin-left: -1rem;
+  width: 97%;
+  border-radius: 1rem;
+  background-color: #333333;
+  padding: 3.5rem;
+}
+.tabs-container .info-tabs-container .tab-contents {
   display: none;
 }
-.tabs-container .info-tabs-container .info-tabs-active {
+.tabs-container .info-tabs-container .tab-contents h4 {
+  font-size: 3.5rem;
+  padding: 1rem;
+}
+.tabs-container .info-tabs-container .tab-contents p {
+  font-size: 1.5rem;
+}
+.tabs-container .info-tabs-container .tab-contents.active {
   display: inline;
 }
 

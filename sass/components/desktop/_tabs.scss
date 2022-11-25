@@ -3,31 +3,54 @@
 }
 
 .tabs-container {
-    width: 100%;
 
-    .title-tabs-container {
-        .title-tabs {
+    width: 95%;
+
+        .tabs {
+            cursor: pointer;
             background-color: #333333;
             text-align: center;
-            padding: 1rem 20%;
+            padding: 0.7rem 20%;
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
             border: solid 2px black;
+            margin-bottom: -2rem;
         }
 
-        .title-tabs:hover {
+        .tabs:hover {
             color: #777;
         }
-    }
 
+        .tabs.active {
+            margin-top: 0.2rem;
+            color: #777;
+            border-bottom: rgba(0, 0, 0, 0.11);
+        }
+        
     .info-tabs-container {
         
-        .info-tabs{
+        margin-left: -1rem;
+        width: 97%;
+        border-radius: 1rem;
+        background-color: #333333;
+        padding: 3.5rem;
+
+        .tab-contents{
             display: none;
+
+            h4 {
+                font-size: 3.5rem;
+                padding: 1rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
         } 
 
-        .info-tabs-active {
+        .tab-contents.active {
             display: inline;
         }
-    }
+    } 
+    
 }

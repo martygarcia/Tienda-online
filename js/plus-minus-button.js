@@ -1,17 +1,29 @@
 export let renderPlusMinusButton = () => {
 
-    let minusButton = document.querySelectorAll(".custom-button-minus");
-    let valueButton = document.querySelectorAll(".custom-button-input");
-    let plusButton = document.querySelectorAll(".custom-button-plus");
+    let buttonMinuses = document.querySelectorAll('.custom-button-minus');
+    let buttonPluses = document.querySelectorAll('.custom-button-plus');
 
-    plusButton.addEventListener("click", () => {
-        valueButton.value++;
+    buttonMinuses.forEach(buttonMinus => {
+
+        buttonMinus.addEventListener("click", () => {
+
+            let amount = buttonMinus.closest('.amount-item-plus-minus-button').querySelector('.custom-button-input');
+
+            if (amount.value > 1) {
+                amount.value--;
+            }
+        });
     });
 
-    minusButton.addEventListener("click", () => {
 
-        if(valueButton.value > 1){
-            valueButton.value--;
-        }
+    buttonPluses.forEach(buttonPlus => {
+
+        buttonPlus.addEventListener("click", () => {
+
+            let amount = buttonPlus.closest('.amount-item-plus-minus-button').querySelector('.custom-button-input');
+
+            amount.value++;
+
+        });
     });
 }

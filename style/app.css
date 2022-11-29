@@ -1188,4 +1188,112 @@ footer .footer-text span {
   display: inline;
 }
 
+.tabs-form-admin {
+  background-color: white;
+  width: 95%;
+}
+
+.tabs-container-admin .title-tabs-container-admin {
+  background-color: #b7b5b5;
+}
+.tabs-container-admin .save-clean-on-off {
+  width: 95%;
+  margin-top: 0.5vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.tabs-container-admin .save-clean-on-off svg {
+  cursor: pointer;
+  color: #636363;
+}
+.tabs-container-admin .save-clean-on-off svg:hover {
+  color: #02A8B1;
+}
+.tabs-container-admin .tabs-side {
+  display: flex;
+}
+.tabs-container-admin .tabs-side .tabs-admin {
+  cursor: pointer;
+}
+.tabs-container-admin .tabs-side .tabs-admin span {
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  display: block;
+}
+.tabs-container-admin .tabs-side .tabs-admin:hover span {
+  background-color: #02A8B1;
+}
+.tabs-container-admin .tabs-side .tabs-admin.active span {
+  background-color: #02A8B1;
+}
+.tabs-container-admin .info-tabs-container-admin .tab-contents-admin {
+  display: none;
+}
+.tabs-container-admin .info-tabs-container-admin .tab-contents-admin.active {
+  display: inline;
+}
+.tabs-container-admin .info-tabs-container-admin {
+  margin-top: 2vh;
+  margin-left: 5rem;
+}
+.tabs-container-admin .info-tabs-container-admin .tab-contents-admin .label-form-admin label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b7b5b5;
+}
+.tabs-container-admin .info-tabs-container-admin .tab-contents-admin .input-form-admin select {
+  border-radius: 0;
+  margin-top: 1vh;
+  border: none;
+  padding: 0.2rem 10rem;
+  border-bottom: 2px solid #b7b5b5;
+}
+
+.body-admin {
+  background-color: whitesmoke;
+}
+
+.admin-main {
+  margin-top: 3vh;
+  height: 100vh;
+}
+.admin-main .ficha-info {
+  margin-left: 2rem;
+  border-top: 2px solid rgb(212, 212, 212);
+  border-bottom: 2px solid rgb(212, 212, 212);
+  background-color: white;
+}
+.admin-main .ficha-info .edit-or-bin {
+  padding: 0.5rem;
+}
+.admin-main .ficha-info .edit-or-bin .img-edit {
+  cursor: pointer;
+  color: #636363;
+}
+.admin-main .ficha-info .edit-or-bin .img-edit:hover {
+  color: #02A8B1;
+}
+.admin-main .ficha-info .edit-or-bin .img-bin {
+  cursor: pointer;
+  color: #636363;
+}
+.admin-main .ficha-info .edit-or-bin .img-bin:hover {
+  color: #02A8B1;
+}
+
+.text {
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+.text .info-text .info-text-title {
+  display: flex;
+}
+.text .info-text .info-text-title h5 {
+  padding-right: 0.3rem;
+  font-size: 1rem;
+  color: #02A8B1;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=app.css.map */

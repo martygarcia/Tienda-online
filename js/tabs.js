@@ -1,7 +1,7 @@
 export let renderTabs = () => {
 
-    let tabs = document.querySelectorAll(".tabs")
-    let contents = document.querySelectorAll(".tab-contents")
+    let tabs = document.querySelectorAll(".tabs,.tabs-admin")
+    let contents = document.querySelectorAll(".tab-contents,.tab-contents-admin")
 
     tabs.forEach(tab => {
 

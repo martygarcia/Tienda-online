@@ -1,0 +1,62 @@
+.body-admin {
+    background-color: whitesmoke;
+}
+
+.admin-main {
+    margin-top: 3vh;
+    height: 100vh;
+
+    .ficha-info {
+        margin-left: 2rem;
+        border-top: 2px solid rgb(212, 212, 212);
+        border-bottom: 2px solid rgb(212, 212, 212);
+        background-color: white;
+
+        .edit-or-bin {
+
+            padding: 0.5rem;
+
+            .img-edit {
+
+                cursor: pointer;
+                color: #636363;
+            }
+
+            .img-edit:hover {
+
+                color: #02A8B1;
+            }
+
+            .img-bin {
+
+                cursor: pointer;
+                color: #636363;
+            }
+
+            .img-bin:hover {
+
+                color: #02A8B1;
+            }
+        }
+    }
+}
+
+.text {
+    margin-left: 2rem;
+    padding: 0.5rem;
+
+    .info-text {
+
+        .info-text-title {
+    
+            display: flex;
+    
+            h5 {
+                padding-right: 0.3rem;
+                font-size: 1rem;
+                color: #02A8B1;
+                font-weight: 600;
+            }
+        }
+    }
+}

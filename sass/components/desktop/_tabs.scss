@@ -6,7 +6,7 @@
 
     width: 95%;
 
-        .tabs {
+        .tabs{
             cursor: pointer;
             background-color: #333333;
             text-align: center;
@@ -52,5 +52,110 @@
             display: inline;
         }
     } 
+    
+}
+
+// Admin
+
+
+.tabs-form-admin {
+    background-color: white;
+    width: 95%;
+}
+
+.tabs-container-admin {
+
+    .title-tabs-container-admin {
+
+        background-color: #b7b5b5;
+    }
+
+    .save-clean-on-off {
+        width: 95%;
+        margin-top: 0.5vh;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            cursor: pointer;
+            color: #636363;
+        }
+
+        svg:hover {
+
+            color: #02A8B1;
+        }
+    }
+
+    .tabs-side {
+
+        display: flex;
+
+        .tabs-admin {
+            cursor: pointer;
+
+            span {
+                color: white;
+                font-weight: 600;
+                padding: 1rem ;
+                display: block;
+            }
+        }
+
+        .tabs-admin:hover {
+            
+            span {
+                background-color:  #02A8B1;
+            }
+        }
+
+        .tabs-admin.active {
+
+            span {
+                background-color: #02A8B1;;
+            }
+        }
+    }
+        
+    .info-tabs-container-admin {
+        
+
+        .tab-contents-admin{
+            display: none;
+        } 
+
+        .tab-contents-admin.active {
+            display: inline;
+        }
+    } 
+
+    .info-tabs-container-admin {
+        margin-top: 2vh;
+        margin-left: 5rem;
+
+        .tab-contents-admin {
+
+            .label-form-admin {
+
+                label {
+
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #b7b5b5;
+                }
+            }
+            .input-form-admin {
+
+                select {
+                    border-radius: 0;
+                    margin-top: 1vh;
+                    border: none;
+                    padding: 0.2rem 10rem;
+                    border-bottom: 2px solid #b7b5b5;
+                }
+            }
+            
+        }
+    }
     
 }

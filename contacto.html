@@ -112,7 +112,7 @@
                         </div>
                         
                         <!-- Parte furmulario -->
-                        <div class="column"> 
+                        <div class="column send-form"> 
                             <form class="contact-form">
                                 <div class="two-columns">
                                     <div class="column">
@@ -125,7 +125,8 @@
                                                 </div>
                                                 <div class="column">
                                                     <div class="custom-form-item-input">
-                                                        <input class="name-regex" type="text">
+                                                        <input class="leters-only-regex" type="text">
+                                                        <span class="leters-error-text">Este campo solo permite letras</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,11 +134,18 @@
                                     </div>
                                     <div class="column">
                                         <div class="custom-form">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Apellidos</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input class="surnames-regex" type="text">
+                                            <div class="custom-form-item">
+                                                <div class="column">
+                                                    <div class="custom-form-item-text">
+                                                        <label for="">Apellidos</label>
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="custom-form-item-input">
+                                                        <input class="surnames-leters-only-regex" type="text">
+                                                        <span class="surname-error-text">Este campo solo permite letras</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -151,17 +159,21 @@
                                                 </div>
                                                 <div class="custom-form-item-input">
                                                     <input class="email-regex" type="email">
+                                                    <span class="email-error-text">El correo no esta completo</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="column">
                                         <div class="custom-form">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Teléfono</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input class="phone-regex" type="telephone">
+                                            <div class="custom-form-item">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Telefono</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input class="phone-regex" type="number">
+                                                    <span class="phone-error-number">El correo no esta completo</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -180,6 +192,9 @@
                                 <!-- Boton -->
                                 <div class="contact-button">
                                     <button class="custom-button send-form-button">Enviar</button>
+                                </div> 
+                                <div class="notification-form">
+                                    <span id="notification-message">El formulario se ha enviado correctamente</span>
                                 </div>
                             </form>
                         </div>

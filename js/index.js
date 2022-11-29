@@ -1,9 +1,11 @@
 import {renderPlusMinusButton} from './plus-minus-button.js';
 import {renderTabs} from './tabs.js';
 import {renderCountTextarea} from './count-textarea.js';
-import {renderButtonForm} from './button-form.js';
+import {renderForm} from './form.js';
+import {renderNotification} from './notification.js'
 
-renderButtonForm();
+renderNotification();
+renderForm();
 renderCountTextarea();
 renderPlusMinusButton();
 renderTabs();

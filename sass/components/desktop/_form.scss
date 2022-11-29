@@ -1,5 +1,31 @@
+
+.notification-form {
+    width: 25%;
+    position: fixed;
+    padding: 1rem 3%;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 2rem;
+    margin-left: 13rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.notification-form.active {
+    opacity: 1;
+}
+
+.notification-form.error {
+    border-top: solid 1rem rgb(184, 33, 33);
+}
+
+.notification-form.success {
+    border-top: solid 1rem rgb(30, 129, 30);
+}
+
 .custom-form  {
     margin-top: 3vh;
+
 
     .custom-form-items {
         margin-bottom: 1rem;
@@ -11,10 +37,33 @@
         }
 
         .custom-form-item-input input{
+            
             color: #000;
             padding: 0.5em;
             width: 100%;
         }
+    }
+
+    .custom-form-item {
+
+        .custom-form-item-input  {
+
+            .leters-error-text, .surname-error-text, .email-error-text,
+            .phone-error-number {
+                display: none;
+            }
+
+            .leters-error-text.active, .surname-error-text.active,
+            .email-error-text.active, .phone-error-number.active {
+                
+                color: red;
+                display: block;
+                margin-top: 0.3rem;
+                position: absolute;
+            }
+
+        }
+    }
 
         .custom-form-textarea-item-text {
     
@@ -22,7 +71,6 @@
             font-size: 25px;
             margin-top: 1rem;
         }
-        custom-form-textarea-item
 
         .custom-form-textarea-item {
             margin-top: 4rem;
@@ -33,5 +81,5 @@
             padding: 0.5rem;
             width: 100%;  
         }
-    }
+    
 }

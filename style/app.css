@@ -748,6 +748,30 @@ footer .footer-text span {
   color: hsl(0deg, 0%, 100%);
 }
 
+.notification-form {
+  width: 25%;
+  position: fixed;
+  padding: 1rem 3%;
+  font-size: 1.4rem;
+  color: white;
+  margin-top: 2rem;
+  margin-left: 13rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.notification-form.active {
+  opacity: 1;
+}
+
+.notification-form.error {
+  border-top: solid 1rem rgb(184, 33, 33);
+}
+
+.notification-form.success {
+  border-top: solid 1rem rgb(30, 129, 30);
+}
+
 .custom-form {
   margin-top: 3vh;
 }
@@ -764,15 +788,26 @@ footer .footer-text span {
   padding: 0.5em;
   width: 100%;
 }
-.custom-form .custom-form-items .custom-form-textarea-item-text {
+.custom-form .custom-form-item .custom-form-item-input .leters-error-text, .custom-form .custom-form-item .custom-form-item-input .surname-error-text, .custom-form .custom-form-item .custom-form-item-input .email-error-text,
+.custom-form .custom-form-item .custom-form-item-input .phone-error-number {
+  display: none;
+}
+.custom-form .custom-form-item .custom-form-item-input .leters-error-text.active, .custom-form .custom-form-item .custom-form-item-input .surname-error-text.active,
+.custom-form .custom-form-item .custom-form-item-input .email-error-text.active, .custom-form .custom-form-item .custom-form-item-input .phone-error-number.active {
+  color: red;
+  display: block;
+  margin-top: 0.3rem;
+  position: absolute;
+}
+.custom-form .custom-form-textarea-item-text {
   color: hsl(0deg, 0%, 100%);
   font-size: 25px;
   margin-top: 1rem;
 }
-.custom-form .custom-form-items custom-form-textarea-item .custom-form-textarea-item {
+.custom-form .custom-form-textarea-item {
   margin-top: 4rem;
 }
-.custom-form .custom-form-items .custom-form-textarea-item-input textarea {
+.custom-form .custom-form-textarea-item-input textarea {
   height: 20vh;
   padding: 0.5rem;
   width: 100%;

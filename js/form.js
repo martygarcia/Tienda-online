@@ -1,4 +1,4 @@
-import {renderRegex} from './regex.js'
+import {renderRegex} from './regex.js';
 
 export let renderForm =  () => {
 

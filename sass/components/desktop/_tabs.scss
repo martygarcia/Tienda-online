@@ -65,6 +65,8 @@
 
 .tabs-container-admin {
 
+    height: 70vh;
+
     .title-tabs-container-admin {
 
         background-color: #b7b5b5;
@@ -157,5 +159,122 @@
             
         }
     }
+
+    .tab-contents-admin {
     
+        .title-contents-admin {
+
+            h4 {
+                color: #b7b5b5;
+                font-size: 2rem;
+                margin-top: 7vh;
+                margin-bottom: 5vh;
+            }
+        }
+
+        .add-img {
+
+            width: 80%;
+            margin-left: 3rem;
+            margin-top: 3vh;
+            border: #02A8B1 3px dotted;
+            height: 20rem;
+
+            .button-add-img {
+
+                text-align: center;
+                margin-top: 25%;
+            }
+        }
+    }
+    
+}
+
+// language
+
+.tabs-language {
+    
+    .title-bar-language  {
+
+        background-color: #b7b5b5;
+        margin-top: 4vh;
+        width: 80%;
+        padding: 1rem;
+
+        .title-language {
+
+            span {
+                cursor: pointer;
+                color: white;
+                font-weight: 600;
+                margin-left: -1rem;
+                padding: 1.06rem;
+            }
+
+            span:hover {
+
+                background-color: #02A8B1;
+                padding: 1.06rem;
+            }
+    
+        }
+        .active {
+
+            span {
+
+                background-color: #02A8B1;
+                padding: 1.06rem;
+            }
+        }
+    }
+
+    .language-contents {
+
+        margin-left: 1.5rem;
+        margin-top: 3vh;
+
+        .contents-label  {
+
+            margin-bottom: 0.5rem;
+
+            label {
+                color: #b7b5b5;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        .contents-input  {
+
+            input {
+
+                border: none;
+                border-bottom: #b7b5b5 solid 2px;
+                padding: 0 30%;
+            }
+        }
+
+        .contents-textarea-label {
+
+            margin-top: 2vh;
+
+            label {
+                color: #b7b5b5;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+        }
+
+        .contents-textarea {
+
+            margin-top: 2vh;
+
+            textarea  {
+
+                border: 2px solid #b7b5b5;
+                padding: 0 27%;
+            }
+        }
+    }
+
 }

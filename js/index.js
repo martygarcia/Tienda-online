@@ -4,6 +4,7 @@ import {renderCountTextarea} from './count-textarea.js';
 import {renderForm} from './form.js';
 import {renderNotification} from './notification.js';
 import {renderTabsLanguage} from './language-tabs.js';
+import{renderLogin} from './login.js';
 
 renderNotification();
 renderForm();
@@ -11,3 +12,4 @@ renderCountTextarea();
 renderPlusMinusButton();
 renderTabs();
 renderTabsLanguage();
+renderLogin();

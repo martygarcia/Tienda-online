@@ -49,6 +49,11 @@ class Menu extends HTMLElement {
         {
             color: tomato;
         }
+
+        #menuToggle li
+        {
+            cursor: pointer;
+        }
         
         
         #menuToggle input

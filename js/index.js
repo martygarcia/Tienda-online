@@ -5,7 +5,11 @@ import {renderForm} from './form.js';
 import {renderNotification} from './notification.js';
 import {renderTabsLanguage} from './language-tabs.js';
 import{renderLogin} from './login.js';
+import{renderContactForm} from './contact-form.js';
+import './pageTitle.js';
+import './menu.js'
 
+renderContactForm();
 renderNotification();
 renderForm();
 renderCountTextarea();
@@ -13,3 +17,4 @@ renderPlusMinusButton();
 renderTabs();
 renderTabsLanguage();
 renderLogin();
+

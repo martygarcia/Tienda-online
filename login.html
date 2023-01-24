@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/app.css">
+    <script type="module" src="js/index.js"></script>
+    <style>
+        .login-container {
+            background-color: #02A8B1;
+            width: 15%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: auto;
+            border-radius: 1rem;
+        }
+
+        .login-container div {
+            margin-left: 1rem;
+        }
+
+        .send-form-button button {
+            margin-top: 0.3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form> 
+        <div class="login-container">
+            <div class="column">
+                <div class="label-login">
+                    <label for="">Email</label>
+                </div>
+                <div class="input-login">
+                    <input name="email" type="text">
+                </div>
+            </div>
+            <div class="column">
+                <div class="label-login">
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="input-login">
+                    <input name="password" type="password">
+                </div>
+            </div>
+            <div class="column">
+                <div class="send-form">
+                    <button class="send-login-button">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

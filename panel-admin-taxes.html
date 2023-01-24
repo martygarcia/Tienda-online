@@ -10,15 +10,18 @@
 </head>
 <body>
     <div class="body-admin">
-        <menu-componet></menu-componet>
+        
         <header>
             <div class="header">
                 <div class="two-columns">
                     <div class="header-title">
-                        <page-title-component title="Clientes"></page-title-component>
+                        <h1>LOREM</h1>
                     </div>
                     <div class="header-menu">
                         <div class="burger-menu">
+                            <!-- <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div> -->
                         </div>
                     </div>
                 </div>
@@ -114,7 +117,7 @@
                     </div>
                     <div class="column-main">
                         <div class="tabs-form-admin">
-                            <form  action="http://127.0.0.1:8080/api/admin/faqs">
+                            <form  action="http://127.0.0.1:8080/api/admin/taxes">
                                 <div class="tabs-container-admin">
                                     <div class="two-columns title-tabs-container-admin">
                                         <div class="column">
@@ -122,14 +125,11 @@
                                                 <div class="tabs-admin active" data-tab="one">
                                                     <span>Contenido</span>
                                                 </div>
-                                                <div class="tabs-admin" data-tab="two">
-                                                    <span>Imagenes</span>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="column">
                                             <div class="save-clean-on-off">
-                                                <div class="img-save">
+                                                <div class="send-form-button img-save">
                                                     <svg style="width:40px;height:40px" viewBox="0 0 24 24">
                                                         <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
                                                     </svg>
@@ -151,66 +151,22 @@
                                             <div class="two-columns">
                                                 <div class="column">
                                                     <div class="label-form-admin">
-                                                        <label> Categoria</label>
+                                                        <label>Tipo</label>
                                                     </div>
                                                     <div class="input-form-admin">
-                                                        <select name="" id="">
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                        </select>
+                                                        <input name="type" type="number">
                                                     </div>
                                                 </div>
                                                 <div class="column">
                                                     <div class="label-form-admin">
-                                                        <label> Categoria</label>
+                                                        <label>Valido</label>
                                                     </div>
                                                     <div class="input-form-admin">
-                                                        <select name="" id="">
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
+                                                        <select name="valid" id="">
+                                                            <option value="1">Vigente</option>
+                                                            <option value="0">No vigente</option>
                                                         </select>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="tabs-language">
-                                                    <div class="title-bar-language">
-                                                        <div class="column">
-                                                                <div class="title-language active" data-tab=""="one">
-                                                                    <span>Español</span>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="language-contents" data-tab="one">
-                                                        <div class="contents-label">
-                                                            <label for="">Titulo</label>
-                                                        </div>
-                                                        <div class="contents-input">
-                                                            <input type="text">
-                                                        </div>
-                                                        <div class="contents-textarea-label">
-                                                            <label for="">Descripcion</label>
-                                                        </div>
-                                                        <div class="contents-textarea">
-                                                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-contents-admin" data-tab="two">
-                                            <div class="title-contents-admin">
-                                                <h4>Subir foto</h4>
-                                            </div>
-                                            <div class="add-img">
-                                                <div class="button-add-img">
-                                                    <button type="file">Añade una imagen</button>
                                                 </div>
                                             </div>
                                         </div>

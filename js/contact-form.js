@@ -1,11 +1,11 @@
-export let renderForm =  () => {
+export let renderContactForm = () => {
+    
+    let sendFormButtonNoLogin = document.querySelector('.send-form-button-no-login');
 
-    let sendFormButton = document.querySelector('.send-form-button');
+    if(sendFormButtonNoLogin) {
 
-    if(sendFormButton){
-
-        sendFormButton.addEventListener('click', event => {
-
+        sendFormButtonNoLogin.addEventListener('click', event => {
+    
             event.preventDefault(); 
             
             let form = document.querySelector('form');
@@ -16,7 +16,6 @@ export let renderForm =  () => {
             fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer ' +  sessionStorage.getItem('accessToken'),
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formDataJson)
@@ -26,7 +25,6 @@ export let renderForm =  () => {
                 
                 document.dispatchEvent(new CustomEvent('message', {
                     detail: {
-                        text: 'Formulario enviado correctamente',
                         type: 'success'
                     }
                 }));

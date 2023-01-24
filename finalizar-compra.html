@@ -15,6 +15,7 @@
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
             <meta name="keywords"    content="palabras clave, separadas, por comas">
             <link rel="stylesheet" href="style/app.css">
+            <script type="module" src="js/index.js"></script>
         </head>
         
         <body>
@@ -51,149 +52,151 @@
                             <h1>Finalizar compra</h1>
                         </div>
                             <!-- Parte furmulario -->
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="custom-form">
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="custom-form-items">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Nombre</label>
+                    <form action="http://127.0.0.1:8080/api/front/customers">
+                        <div class="two-columns">
+                            <div class="column">
+                                <div class="custom-form">
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Nombre</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="name" type="text">
+                                                </div>
                                             </div>
-                                            <div class="custom-form-item-input">
-                                                <input type="text">
+                                        </div>
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Apellidos</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="surname" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Telefono</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="phone" type="number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Email</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="email" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Ciudad</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="city" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="custom-form-items">
+                                                <div class="custom-form-item-text">
+                                                    <label for="">Codigo postal</label>
+                                                </div>
+                                                <div class="custom-form-item-input">
+                                                    <input name="postal_code" type="text">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="column">
-                                        <div class="custom-form-items">
+                                        <div class="custom-form-item">
                                             <div class="custom-form-item-text">
-                                                <label for="">Apellidos</label>
+                                                <label for="">Direccion</label>
                                             </div>
                                             <div class="custom-form-item-input">
-                                                <input type="text">
+                                                <input name="direction" type="text">
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="custom-form-items">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Telefono</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="custom-form-items">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Email</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="custom-form-items">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Ciudad</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="custom-form-items">
-                                            <div class="custom-form-item-text">
-                                                <label for="">Codigo postal</label>
-                                            </div>
-                                            <div class="custom-form-item-input">
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="custom-form-item">
-                                        <div class="custom-form-item-text">
-                                            <label for="">Direccion</label>
-                                        </div>
-                                        <div class="custom-form-item-input">
-                                            <input type="text">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="column">
+                                <section class="resum-buy-checkout">
+                                    <div class="resum-checkout-title">
+                                        <span>Resumen de la compra</span>
+                                    </div>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="resum-checkout-text">
+                                                <span>IVA</span>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="resum-checkout-input">
+                                                <span>20€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="resum-checkout-text">
+                                                <span>Transporte</span>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="resum-checkout-input">
+                                                <span>0€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="resum-checkout-text">
+                                                <span>Total</span>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="resum-checkout-input">
+                                                <span>30€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- pay method -->
+                                    <div class="buy-method">
+                                        <div class="input-transferencia">
+                                            <input type="radio">
+                                            <label for="">Transferencia Bancaria</label>
+                                        </div>
+                                        <div class="input-paypal">
+                                            <input type="radio">
+                                            <label for="">Paypal</label>
+                                        </div>
+                                        <div class="input-credit-cart">
+                                            <input type="radio">
+                                            <label for="">Tarjeta de credito</label>
+                                        </div>
+                                        <div class="container.custom-button">
+                                            <button class="send-form-button-no-login custom-button">Pagar</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
-                        <div class="column">
-                            <section class="resum-buy-checkout">
-                                <div class="resum-checkout-title">
-                                    <span>Resumen de la compra</span>
-                                </div>
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="resum-checkout-text">
-                                            <span>IVA</span>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="resum-checkout-input">
-                                            <span>20€</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="resum-checkout-text">
-                                            <span>Transporte</span>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="resum-checkout-input">
-                                            <span>0€</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="resum-checkout-text">
-                                            <span>Total</span>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="resum-checkout-input">
-                                            <span>30€</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- pay method -->
-                                <div class="buy-method">
-                                    <div class="input-transferencia">
-                                        <input type="radio">
-                                        <label for="">Transferencia Bancaria</label>
-                                    </div>
-                                    <div class="input-paypal">
-                                        <input type="radio">
-                                        <label for="">Paypal</label>
-                                    </div>
-                                    <div class="input-credit-cart">
-                                        <input type="radio">
-                                        <label for="">Tarjeta de credito</label>
-                                    </div>
-                                    <div class="container.custom-button">
-                                        <button class="custom-button">Pagar</button>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+                    </form>
             </main>
     
             <footer>

@@ -1329,6 +1329,9 @@ footer .footer-text span {
 .body-admin {
   background-color: whitesmoke;
 }
+.body-admin h1 {
+  margin-left: 6vh;
+}
 
 .admin-main {
   margin-top: 3vh;

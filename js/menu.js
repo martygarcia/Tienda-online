@@ -1,23 +1,32 @@
+import  {API_URL} from '../config/config.js';
+
 class Menu extends HTMLElement {
 
     constructor() {
         super(); 
         this.shadow = this.attachShadow({ mode: 'open' });
+        this.menu = this.getAttribute('menu');
+        this.menuItems = [];
     }
 
     connectedCallback() {
-        
-        document.addEventListener("newUrl",( event =>{
-            
-        }));
 
-        this.render();
+        this.loadData().then( () => this.render());
     }
 
-    attributeChangedCallback(name, oldValue, newValue){
+    async loadData() {
 
-        this.render();
-    }
+        let url = `${API_URL}/api/admin/menus/display/${this.getAttribute('menu')}`;
+
+        let result = await fetch(url,{  
+            headers: {
+                'Authorization': 'Bearer ' +  sessionStorage.getItem('accessToken'),
+            },
+        });
+
+        let data = await result.json();
+        this.menuItems = Object.values(data);
+    } 
 
     render() {
 
@@ -30,7 +39,6 @@ class Menu extends HTMLElement {
             position: absolute;
             top: 20px;
             left: 40px;
-            
             z-index: 1;
             
             -webkit-user-select: none;
@@ -179,16 +187,27 @@ class Menu extends HTMLElement {
                 <span></span>
                 <span></span>
             <ul id="menu">
-                <li class="menu-item">Clientes</li>
-                <li class="menu-item">Slider</li>
-                <li class="menu-item">Lorem</li>
             </ul>
             </div>
         </nav>
-        
         `;	
 
-        let menuItems = this.shadow.querySelectorAll('.menu-item');
+        this.menuItems.forEach( menuElement =>  {
+            console.log(menuElement);
+            let menu = this.shadow.querySelector('.menu');
+            
+            menu.addEventListener("load", () => {
+
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+                a.innerHTML = menuElement.name;
+                li.classList.add("menu-item");
+                document.menu.appendChild(li);
+                document.li.appendChild(a);
+            })
+            
+
+        });
 
         menuItems.forEach( menuItem => {
             menuItem.addEventListener('click', () => {
@@ -206,4 +225,3 @@ class Menu extends HTMLElement {
 }
 
 customElements.define('menu-componet', Menu);
-// la palabra requiere un guion si o si 

@@ -42,3 +42,4 @@ class PageTitle extends HTMLElement {
 
 customElements.define('page-title-component', PageTitle);
 // la palabra requiere un guion si o si 
+

@@ -7,7 +7,8 @@ import {renderTabsLanguage} from './language-tabs.js';
 import{renderLogin} from './login.js';
 import{renderContactForm} from './contact-form.js';
 import './pageTitle.js';
-import './menu.js'
+// import './menu.js'
+import './notification-component.js'
 
 renderContactForm();
 renderNotification();

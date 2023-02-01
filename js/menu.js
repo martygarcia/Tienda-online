@@ -192,31 +192,28 @@ class Menu extends HTMLElement {
         </nav>
         `;	
 
+        let menu = this.shadow.querySelector('#menu');
+
         this.menuItems.forEach( menuElement =>  {
-            console.log(menuElement);
-            let menu = this.shadow.querySelector('.menu');
-            
-            menu.addEventListener("load", () => {
 
-                let li = document.createElement("li");
-                let a = document.createElement("a");
-                a.innerHTML = menuElement.name;
-                li.classList.add("menu-item");
-                document.menu.appendChild(li);
-                document.li.appendChild(a);
-            })
-            
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            a.innerHTML = menuElement.name;
+            a.href = menuElement.customUrl;
+            li.classList.add("menu-item");
+            li.appendChild(a);
+            menu.appendChild(li);
 
-        });
+            a.addEventListener('click', event => {
 
-        menuItems.forEach( menuItem => {
-            menuItem.addEventListener('click', () => {
+                event.preventDefault();
 
                 this.shadow.querySelector("input").checked = false;
 
                 document.dispatchEvent(new CustomEvent('newUrl', {
                     detail: {
-                        title: menuItem.textContent,
+                        title: a.textContent,
+                        url: a.getAttribute("href")
                     }
                 }));
             });

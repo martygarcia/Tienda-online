@@ -79,23 +79,24 @@ class Table extends HTMLElement {
         }
         
         .info-text-title {
-    
+            
+            marlin-top: 1vh;
             display: flex;
-            justify-content: space-between;
         }
         
         .info-text-title h5{
 
             padding-right:0.3rem;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             margin: 0;
+            margin-left: -0.7rem;
             color: #02A8B1;
             font-weight: 600;
         }
 
         .info-text-title span {
 
-            font-size: 1.05rem;
+            font-size: 1.15rem;
         }
         
             /* Columns */
@@ -168,6 +169,18 @@ class Table extends HTMLElement {
             width: 100%;
         }
 
+        .table-text {
+            display: flex;
+        }
+
+        .table-text h5 {
+            margin-top: 0.5vh;
+        }
+
+        .table-text span {
+            margin-top: 0.7vh;
+        }
+
         </style>
 
         <div class="ficha-info">
@@ -188,14 +201,10 @@ class Table extends HTMLElement {
                                         <div class="edit-or-bin">
                                             <div class="column">
                                                 <div class="img-edit" id="edit">
-                                                    <svg style="width:26px;height:26px" viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M16.84,2.73C16.45,2.73 16.07,2.88 15.77,3.17L13.65,5.29L18.95,10.6L21.07,8.5C21.67,7.89 21.67,6.94 21.07,6.36L17.9,3.17C17.6,2.88 17.22,2.73 16.84,2.73M12.94,6L4.84,14.11L7.4,14.39L7.58,16.68L9.86,16.85L10.15,19.41L18.25,11.3M4.25,15.04L2.5,21.73L9.2,19.94L8.96,17.78L6.65,17.61L6.47,15.29" />
-                                                    </svg>
+                                                    
                                                 </div>
                                                 <div class="img-bin" id="remove">
-                                                    <svg style="width:26px;height:26px" viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M20.37,8.91L19.37,10.64L7.24,3.64L8.24,1.91L11.28,3.66L12.64,3.29L16.97,5.79L17.34,7.16L20.37,8.91M6,19V7H11.07L18,11V19A2,2 0 0,1 16,21H8A2,2 0 0,1 6,19Z" />
-                                                    </svg>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -205,59 +214,40 @@ class Table extends HTMLElement {
         </div>
         `;	
 
+        let list = this.shadow.querySelector(".info-text-title");
+        let tableStructure = this.setTableStructure();
     
-    let tableStructure = this.setTableStructure();
-
-    this.data.forEach(element => {
-
-        let tableItem = document.createElement("h5");
-
-        for (const [key, value] of Object.entries(element)) {
-
-        if (Object.keys(tableStructure.headers).includes(key)) {
-            tableItem.innerHTML += `<div>${tableStructure.headers[key].label}: ${value}</div>`;
-        }
-    }
-
-
-    });
-
         this.data.forEach(element => {
-
-            let entries = Object.entries(element);
-            let list = this.shadow.querySelector(".info-text-title");
-
-
-            for (let i = 0; i < entries.length; i++) {
-
-                let key = entries[i][0];
-                let value = entries[i][1];
-
-            let keys = document.createElement('h5'); 
-
-            for (const [keys] of Object.entries(element)) {
     
-            if (Object.keys(tableStructure.headers).includes(key)) {
-                key.innerHTML += `<div>${tableStructure.headers[key]}</div>`;
+            let tableItem = document.createElement("div");
+    
+            for (const [key , value] of Object.entries(element)) {
+
+                if (Object.keys(tableStructure.headers).includes(key)) {
+                    tableItem.innerHTML += `<div class="table-text"><h5>${tableStructure.headers[key].label}:</h5> <span>${element[key]}</span></div>`;
+                }
             }
-
-            list.append(listItem);
-            
-        }
-
-            keys.textContent = key + ":";
-
-            this.shadowRoot.querySelector('.info-text-title h5').appendChild(keys);
-
-            let values = document.createElement('div');
-            
-            values.textContent = value;
-
-            this.shadowRoot.querySelector('.info-text-title span').appendChild(values);
-
-
-            }
+    
+            list.append(tableItem);
+    
         });
+
+        let Buttons = this.shadow.querySelectorAll(".edit-or-bin");
+
+        Buttons.forEach(element => {
+
+            let editButton = element.querySelector("#edit");
+            let binButton = element.querySelector("#remove ");
+
+            editButton.innerHTML = `<svg style="width:26px;height:26px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M16.84,2.73C16.45,2.73 16.07,2.88 15.77,3.17L13.65,5.29L18.95,10.6L21.07,8.5C21.67,7.89 21.67,6.94 21.07,6.36L17.9,3.17C17.6,2.88 17.22,2.73 16.84,2.73M12.94,6L4.84,14.11L7.4,14.39L7.58,16.68L9.86,16.85L10.15,19.41L18.25,11.3M4.25,15.04L2.5,21.73L9.2,19.94L8.96,17.78L6.65,17.61L6.47,15.29" />
+                                    </svg>`;
+
+            binButton.innerHTML = `<svg style="width:26px;height:26px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M20.37,8.91L19.37,10.64L7.24,3.64L8.24,1.91L11.28,3.66L12.64,3.29L16.97,5.79L17.34,7.16L20.37,8.91M6,19V7H11.07L18,11V19A2,2 0 0,1 16,21H8A2,2 0 0,1 6,19Z" />
+                                </svg>`;
+        });
+
     }
     
     setTableStructure() {

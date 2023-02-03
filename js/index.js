@@ -4,12 +4,13 @@ import {renderCountTextarea} from './count-textarea.js';
 import {renderForm} from './form.js';
 import {renderNotification} from './notification.js';
 import {renderTabsLanguage} from './language-tabs.js';
-import{renderLogin} from './login.js';
 import{renderContactForm} from './contact-form.js';
 import './pageTitle.js';
 import './menu.js';
 import './notification-component.js';
 import './table-conponet.js';
+import './login-component.js';
+import './tabs-componet.js';
 
 renderContactForm();
 renderNotification();
@@ -18,5 +19,4 @@ renderCountTextarea();
 renderPlusMinusButton();
 renderTabs();
 renderTabsLanguage();
-renderLogin();
 

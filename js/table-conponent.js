@@ -70,7 +70,7 @@ class Table extends HTMLElement {
         }
 
         .img-bin:hover {
-            color: #02A8B1;
+            color: #02A8B1;nnnn
         }
 
         .text {

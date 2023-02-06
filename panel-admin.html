@@ -24,7 +24,6 @@
                 </div>
             </div>
         </header>
-
         <main>
             <div class="admin-main">
                 <div class="two-columns-aside">
@@ -32,114 +31,11 @@
                         <table-component url="/api/admin/users"></table-component>
                     </div>
                     <div class="column-main">
-                        <div class="tabs-form-admin">
-                            <form  action="http://127.0.0.1:8080/api/admin/faqs">
-                                <div class="tabs-container-admin">
-                                    <div class="two-columns title-tabs-container-admin">
-                                        <div class="column">
-                                            <div class="tabs-side">
-                                                <div class="tabs-admin active" data-tab="one">
-                                                    <span>Contenido</span>
-                                                </div>
-                                                <div class="tabs-admin" data-tab="two">
-                                                    <span>Imagenes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column">
-                                            <div class="save-clean-on-off">
-                                                <div class="img-save">
-                                                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
-                                                    </svg>
-                                                </div>
-                                                <div class="img-clean">
-                                                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,8.12C10.26,7.22 12.11,7.37 13.65,8.44L19.36,2.72M5.93,17.57C3.92,15.56 2.69,13.16 2.35,10.92L7.23,8.83L14.67,16.27L12.58,21.15C10.34,20.81 7.94,19.58 5.93,17.57Z" />
-                                                    </svg>
-                                                </div>
-                                                <!-- <div class="button-on-off">
-                                                    <div class="button-on">On</div>
-                                                    <div class="button-off">Off</div>
-                                                </div> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="info-tabs-container-admin">
-                                        <div class="tab-contents-admin active" data-tab="one">
-                                            <div class="two-columns">
-                                                <div class="column">
-                                                    <div class="label-form-admin">
-                                                        <label> Categoria</label>
-                                                    </div>
-                                                    <div class="input-form-admin">
-                                                        <select name="" id="">
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="column">
-                                                    <div class="label-form-admin">
-                                                        <label> Categoria</label>
-                                                    </div>
-                                                    <div class="input-form-admin">
-                                                        <select name="" id="">
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="tabs-language">
-                                                    <div class="title-bar-language">
-                                                        <div class="column">
-                                                                <div class="title-language active" data-tab=""="one">
-                                                                    <span>Español</span>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="language-contents" data-tab="one">
-                                                        <div class="contents-label">
-                                                            <label for="">Titulo</label>
-                                                        </div>
-                                                        <div class="contents-input">
-                                                            <input type="text">
-                                                        </div>
-                                                        <div class="contents-textarea-label">
-                                                            <label for="">Descripcion</label>
-                                                        </div>
-                                                        <div class="contents-textarea">
-                                                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-contents-admin" data-tab="two">
-                                            <div class="title-contents-admin">
-                                                <h4>Subir foto</h4>
-                                            </div>
-                                            <div class="add-img">
-                                                <div class="button-add-img">
-                                                    <button type="file">Añade una imagen</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                        <form-component url="/api/admin/users"></form-component>
                         </div>
                     </div>
                     <admin-notification></admin-notification>
-                    </div>
+                    
                 </div>
             </div>
         </main>

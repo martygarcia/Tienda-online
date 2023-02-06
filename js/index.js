@@ -8,9 +8,9 @@ import{renderContactForm} from './contact-form.js';
 import './pageTitle.js';
 import './menu.js';
 import './notification-component.js';
-import './table-conponet.js';
+import './table-conponent.js';
 import './login-component.js';
-import './tabs-componet.js';
+import './form-component.js';
 
 renderContactForm();
 renderNotification();

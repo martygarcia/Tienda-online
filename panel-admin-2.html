@@ -1,70 +1,9 @@
-<div class="info-tabs-container-admin">
-    <div class="tab-contents-admin active" data-tab="one">
-        <div class="two-columns">
-            <div class="column">
-                <div class="label-form-admin">
-                    <label> Categoria</label>
-                </div>
-                <div class="input-form-admin">
-                    <select name="" id="">
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                    </select>
-                </div>
-            </div>
-            <div class="column">
-                <div class="label-form-admin">
-                    <label> Categoria</label>
-                </div>
-                <div class="input-form-admin">
-                    <select name="" id="">
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                        <option>lorem</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="tabs-language">
-                <div class="title-bar-language">
-                    <div class="column">
-                            <div class="title-language active" data-tab=""="one">
-                                <span>Español</span>
-                            </div>
-                    </div>
-                </div>
-                <div class="language-contents" data-tab="one">
-                    <div class="contents-label">
-                        <label for="">Titulo</label>
-                    </div>
-                    <div class="contents-input">
-                        <input type="text">
-                    </div>
-                    <div class="contents-textarea-label">
-                        <label for="">Descripcion</label>
-                    </div>
-                    <div class="contents-textarea">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tab-contents-admin" data-tab="two">
-        <div class="title-contents-admin">
-            <h4>Subir foto</h4>
-        </div>
-        <div class="add-img">
-            <div class="button-add-img">
-                <button type="file">Añade una imagen</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+setFormStructure = async () => {
+        
+        let url = this.getAttribute('url');
+
+        switch (url) {
+
+            case '/api/admin/users':
+
+                return {

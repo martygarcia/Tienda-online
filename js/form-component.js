@@ -40,10 +40,6 @@ class Form extends HTMLElement {
         
                 color: #02A8B1;
             }
-    
-            .tabs-container-admin {
-        
-                height: 70vh; }
 
             .save-clean-on-off {
                 width: 95%;
@@ -74,28 +70,13 @@ class Form extends HTMLElement {
             }
             
         
-            .tabs-admin:hover {
-                
-                
-            }
-
-            span {
-                background-color:  #02A8B1;
-            }
-        
-            span {
-                background-color: #02A8B1;;
-            }
-
-            
-        
-                .tab-contents-admin{
-                    display: none;
-                } 
-        
-                .tab-contents-admin.active {
-                    display: inline;
-                } 
+            .tab-contents-admin{
+                display: none;
+            } 
+    
+            .info-tabs-container .active {
+                display: inline;
+            } 
         
             .info-tabs-container-admin {
                 margin-top: 2vh;
@@ -141,34 +122,65 @@ class Form extends HTMLElement {
                 text-align: center;
                 margin-top: 25%;
             }
-            
-        
-        // language
-        
-        
-            
-            .title-bar-language  {
-        
-                background-color: #b7b5b5;
-                margin-top: 4vh;
-                width: 80%;
-                padding: 1rem;
-        
-                    span {
-                        cursor: pointer;
-                        color: white;
-                        font-weight: 600;
-                        margin-left: -1rem;
-                        padding: 1.06rem;
-                    }
-        
-                    span:hover {
-        
-                        background-color: #02A8B1;
-                        padding: 1.06rem;
-                    }
 
-            .active span {
+            .row {
+                display: flex;
+                justify-content: center;
+            }
+
+            .form-element {
+                margin-right: 20rem;
+                margin-top: 3vh;
+            }
+
+            .row:nth-child(6) input {
+                padding: 0 60%;
+            }
+
+            .row:nth-child(5) input {
+                padding: 0 100%;
+                width: 100%;
+            }
+
+            .row:nth-child(7) label {
+                font-size: 1.1rem;
+            }
+
+            .row:nth-child(7) div {
+                margin-right: 7rem;
+            }
+
+            .row:nth-child(7) input {
+                padding: 0 13%;
+            }
+
+            .row:nth-child(8) input {
+                pading: 0 0;
+            }
+
+            .row:last-child textarea {
+                padding: 3rem 20rem;
+            }
+
+        
+        // languages
+        
+            span {
+                cursor: pointer;
+                color: white;
+                font-weight: 600;
+                margin-left: -1rem;
+                padding: 1.06rem;
+            }
+
+            span:hover {
+
+                background-color: #02A8B1;
+                padding: 1rem;
+                cursor: pointer;
+            }
+
+            span.active{
         
                 background-color: #02A8B1;
                 padding: 1.06rem;
@@ -180,46 +192,50 @@ class Form extends HTMLElement {
                 margin-top: 3vh; 
             }
         
-                .contents-label  {
-        
-                    margin-bottom: 0.5rem;
-                }
+            .contents-label  {
+    
+                margin-bottom: 0.5rem;
+            }
 
-                label {
-                    color: #b7b5b5;
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                }
-                
-                input {
+            label {
+                color: grey;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            
+            input {
+
+                border: none;
+                border-bottom: #b7b5b5 solid 2px;
+                margin-top: 1vh;
+                padding-right: 60%;
+            }
+
+            textarea {
+            }
     
-                    border: none;
-                    border-bottom: #b7b5b5 solid 2px;
-                    padding: 0 30%;
-                }
-        
-                .contents-textarea-label {
-        
-                    margin-top: 2vh;
-                }
-        
-                label {
-                    color: #b7b5b5;
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                }
-                
-        
-                .contents-textarea {
-        
-                    margin-top: 2vh;
-                } 
-        
-                textarea  {
+            .contents-textarea-label {
     
-                    border: 2px solid #b7b5b5;
-                    padding: 0 27%;
-                }
+                margin-top: 2vh;
+            }
+    
+            label {
+                color: grey;
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+            
+    
+            .contents-textarea {
+    
+                margin-top: 2vh;
+            } 
+    
+            textarea  {
+
+                border: 2px solid #b7b5b5;
+                padding-right: 60%;
+            }
                 
         
             /* Columns */
@@ -312,15 +328,11 @@ class Form extends HTMLElement {
                     <div class="tabs-container-admin">
                         <div class="two-columns title-tabs-container-admin">
                             <div class="tabs-side">
-                                <div class="tabs-admin active" data-tab="one">
-                                </div>
-                                <div class="tabs-admin" data-tab="two">
-                                </div>
+                            
                             </div>    
                         </div>
                         <div class="info-tabs-container-admin">
-                            <div class="tab-contents-admin active" data-tab="one">
-                            </div>
+                        
                         </div>    
                     </div>
                 </form>
@@ -328,78 +340,289 @@ class Form extends HTMLElement {
         </div>
         `;	
 
-        const formElements = await this.setFormStructure();
+        this.formStructure = await this.setFormStructure();
 
-        // Tabs
+        const form = this.shadow.querySelector('form');
+        const tabsContainerItems = this.shadow.querySelector('.tabs-side'); 
+        const tabsContainerContent = this.shadow.querySelector('.info-tabs-container-admin'); 
 
-        let tabsContainer = this.shadowRoot.querySelector('.tabs-admin');
-        let tab = document.createElement('span');
-        tab.innerHTML = formElements.tabs.main.label;
-        tabsContainer.appendChild(tab);
+        for(let tab in this.formStructure.tabs) {
 
-        // Form
+            const tabElement = document.createElement('span');
+            tabElement.classList.add('tab-item');            
+            tabElement.dataset.tab = tab;
+            tabElement.innerHTML = this.formStructure.tabs[tab].label;
+            tabsContainerItems.append(tabElement);
 
-        let formContents = this.shadowRoot.querySelectorAll('.tab-contents-admin');
+            const tabPanel = document.createElement('div');
+            tabPanel.dataset.tab = tab;
+            tabPanel.classList.add('tab-panel');
+            tabsContainerContent.append(tabPanel);
 
-        formContents.forEach(element => {
+            for (let row in this.formStructure.tabsContent[tab].rows) {
 
-            // row1
+                const tabPanelRow = document.createElement('div');
+                tabPanelRow.classList.add('row');
 
-            let nameForm = document.createElement('div');
-            nameForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row1.formElements.name.label}</label>` + 
-            `<${formElements.tabsContent.main.rows.row1.formElements.name.element} type="${formElements.tabsContent.main.rows.row1.formElements.name.type}">`;
-            element.appendChild(nameForm);
+                for(let field in this.formStructure.tabsContent[tab].rows[row].formElements) {
 
-            let emailForm = document.createElement('div');
-            emailForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row1.formElements.email.label}</label>` + 
-            `<${formElements.tabsContent.main.rows.row1.formElements.email.element} type="${formElements.tabsContent.main.rows.row1.formElements.email.type}"> `
-            element.appendChild(emailForm);
+                    let formElement = this.formStructure.tabsContent[tab].rows[row].formElements[field];
 
-            // row2
+                    const formElementContainer = document.createElement('div');
+                    const formElementLabel = document.createElement('div');
+                    const formElementInput = document.createElement('div');
+                    formElementContainer.append(formElementLabel);
+                    formElementContainer.append(formElementInput);
+        
+                    formElementContainer.classList.add('form-element');
+                    formElementLabel.classList.add('lab');
+                    formElementInput.classList.add('input-form-admin');
+        
+                    if(formElement.label){
+                        const label = document.createElement('label');
+                        label.innerText = formElement.label;
+                        label.setAttribute('for', field);
+                        formElementLabel.append(label);
+                    }
+    
+                    if (formElement.element === 'input') {
+        
+                        switch (formElement.type) {
 
+                            case 'hidden': {
 
-            let passwordForm = document.createElement('div');
-            passwordForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row2.formElements.password.label}</label>` +
-            `<${formElements.tabsContent.main.rows.row2.formElements.password.element} type="${formElements.tabsContent.main.rows.row2.formElements.password.type}">`
-            element.appendChild(passwordForm);
+                                const input = document.createElement('input');
+                                input.type = formElement.type;
+                                input.name = field;
+                                input.value = formElement.value || '';
 
-            let passwordConfirmationForm = document.createElement('div');
-            passwordConfirmationForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row2.formElements.repeatPassword.label}</label>` +
-            `<${formElements.tabsContent.main.rows.row2.formElements.repeatPassword.element} type="${formElements.tabsContent.main.rows.row2.formElements.repeatPassword.type}">`
-            element.appendChild(passwordConfirmationForm);
+                                form.append(input);
+
+                                continue;
+                            }
+
+                            case 'checkbox':
+                            case 'radio': {
+        
+                                const inputContainer = document.createElement('div');
+                                inputContainer.classList.add(`${formElement.type}-container`);
+                
+                                formElement.options.forEach(option => {
+                                    const input = document.createElement('input');
+                                    const inputLabel = document.createElement('label');
+                                    inputLabel.innerText = option.label;
+                                    input.id = field;
+                                    input.type = formElement.type;
+                                    input.name = field;
+                                    input.value = option.value || '';
+                                    input.checked = option.checked || false;
+                                    input.disabled = option.disabled || false;
+
+                                    inputContainer.append(inputLabel);
+                                    inputContainer.append(input);
+                                });
+
+                                formElementInput.append(inputContainer);
+
+                                break;
+                            }
+
+                            case 'range': {
+
+                                const rangeContainer = document.createElement('div');
+                                rangeContainer.classList.add('range-container');
+                
+                                const input = document.createElement('input');
+                                input.id = field;
+                                input.type = formElement.type;
+                                input.name = field;
+                                input.min = formElement.min || '';
+                                input.max = formElement.max || '';
+                                input.step = formElement.step || '';
+                                input.value = formElement.value || '';
+                                rangeContainer.append(input);
+
+                                const rangeValue = document.createElement('div');
+                                rangeValue.classList.add('range-value');
+                                rangeValue.innerText = formElement.value;
+                                rangeContainer.append(rangeValue);
+
+                                input.addEventListener('input', () => {
+                                    rangeValue.innerText = input.value;
+                                });
+
+                                formElementInput.append(rangeContainer);
+
+                                break;
+                            }
+
+                            case 'number':
+                            case 'date':
+                            case 'time':
+                            case 'datetime-local':
+                            case 'month':
+                            case 'week': {
+                                const input = document.createElement('input');
+                                input.id = field;
+                                input.type = formElement.type;
+                                input.name = field;
+                                input.min = formElement.min || '';
+                                input.max = formElement.max || '';
+                                input.step = formElement.step || '';
+                                input.placeholder = formElement.placeholder || '';
+                                input.value = formElement.value || '';
+                                input.readOnly = formElement.readOnly || false;
+                                input.dataset.validate = formElement.validate || '';
+
+                                formElementInput.append(input);
+                            
+                                break;
+                            }
+
+                            case 'file': {
+
+                                if(!this.shadow.querySelector('image-gallery-component')){
+                                    const imageGallery = document.createElement('image-gallery-component');
+                                    this.shadow.append(imageGallery);
+                                }
+
+                                const input = document.createElement('upload-image-button-component');
+                                input.id = field;
+                                input.setAttribute("name", field);
+                                input.setAttribute("languageAlias", "es");
+                                input.setAttribute("quantity", formElement.quantity);
+
+                                // input.accept = formElement.accept || '';
+                                // input.multiple = formElement.multiple || false;
+                                // input.required = formElement.required || false;
+                                // input.dataset.validate = formElement.validate || '';
+
+                                formElementInput.append(input);
+
+                                break;
+                            }
+
+                            default: {
+                                
+                                const input = document.createElement('input');
+                                input.id = field;
+                                input.type = formElement.type;
+                                input.name = field;
+                                input.value = formElement.value || '';
+                                input.placeholder = formElement.placeholder || '';
+                                input.dataset.validate = formElement.validate || '';
+                            
+                                if(formElement.maxLength){
+
+                                    input.maxLength = formElement.maxLength || '';
+                                    const counter = document.createElement('div');
+                                    formElementLabel.append(counter);
+
+                                    input.addEventListener('input', () => {
+                                        if(input.value.length > 0){
+                                            counter.textContent = input.value.length + ' / ' + input.maxLength;                            
+                                        }else{
+                                            counter.textContent = '';
+                                        }
+                                    });
+                                }
             
-            // row3
+                                formElementInput.append(input);
 
-            let roleForm = document.createElement('div');
-            roleForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row3.formElements.permissions.label}</label>`;
-            element.appendChild(roleForm);
+                                break;
+                            }
+                        }
+                    }
 
-            for (let i = 0; i < formElements.tabsContent.main.rows.row3.formElements.permissions.options.length; i++) {
-                let option = document.createElement('label');
-                option.innerHTML = formElements.tabsContent.main.rows.row3.formElements.permissions.options[i].label;
-                let input = document.createElement('input');
-                input.setAttribute('type', 'checkbox');
-                input.setAttribute('value', formElements.tabsContent.main.rows.row3.formElements.permissions.options[i].value);
-                option.appendChild(input);
-                roleForm.appendChild(option);
-            }
+                    if (formElement.element === 'textarea') {
 
-            // row4
+                        const textarea = document.createElement('textarea');
+                        textarea.id = field;
+                        textarea.name = field;
+                        textarea.disabled = formElement.disabled || false;
+                        textarea.readOnly = formElement.readOnly || false;
+                        textarea.value = formElement.value || '';
+                        textarea.cols = formElement.cols || '';
+                        textarea.rows = formElement.rows || '';
+                        textarea.wrap = formElement.wrap || '';
+                        textarea.placeholder = formElement.placeholder || '';
+                        textarea.dataset.validate = formElement.validate || '';
+                        
+                        if(formElement.maxLength){
 
-            let permissionsForm = document.createElement('div');
-            permissionsForm.innerHTML = `<label>${formElements.tabsContent.main.rows.row4.formElements.permissions.label}</label>`;
-            element.appendChild(permissionsForm);
+                            textarea.maxLength = formElement.maxLength || '';
+                            const counter = document.createElement('div');
+                            formElementLabel.append(counter);
 
-            for (let i = 0; i < formElements.tabsContent.main.rows.row4.formElements.permissions.options.length; i++) {
-                let option = document.createElement('label');
-                option.innerHTML = formElements.tabsContent.main.rows.row4.formElements.permissions.options[i].label;
-                let input = document.createElement('input');
-                input.setAttribute('type', 'checkbox');
-                input.setAttribute('value', formElements.tabsContent.main.rows.row4.formElements.permissions.options[i].value);
-                option.appendChild(input);
-                element.appendChild(option);
-            }
+                            textarea.addEventListener('input', () => {
+                                if(textarea.value.length > 0){
+                                    counter.textContent = textarea.value.length + ' / ' + textarea.maxLength;                            
+                                }else{
+                                    counter.textContent = '';
+                                }
+                            });
+                        }
 
+                        formElementInput.append(textarea);
+                    }
+        
+                    if (formElement.element === 'select') {
+        
+                        const select = document.createElement('select');
+                        select.id = field;
+                        select.name = field;
+                        select.disabled = formElement.disabled || false;
+                        select.required = formElement.required || false;
+                        select.multiple = formElement.multiple || false;
+        
+                        formElement.options.forEach(option => {
+                            const optionElement = document.createElement('option');
+                            optionElement.value = option.value;
+                            optionElement.innerText = option.label;
+                            select.append(optionElement);
+                        });
+        
+                        formElementInput.append(select);
+                    }
+
+                    tabPanelRow.append(formElementContainer);
+                };
+
+                tabPanel.append(tabPanelRow);
+            };
+        }
+
+        this.renderTabs();
+    }
+
+    renderTabs = () => {
+
+        this.shadow.querySelector(".tab-item").classList.add('active');
+        this.shadow.querySelector(".tab-panel").classList.add('active');
+
+        let tabs = this.shadow.querySelectorAll(".tab-item")
+        let contents = this.shadow.querySelectorAll(".tab-panel")
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(tab => {
+                    tab.classList.remove("active")
+                });
+
+                tab.classList.add("active")
+
+                contents.forEach(content => {
+
+                    if(tab.dataset.tab == content.dataset.tab) {
+                        content.classList.add("active")
+                    }
+                    else{
+                        content.classList.remove("active")
+                    }
+                });
+            });
 
         });
 
@@ -418,6 +641,9 @@ class Form extends HTMLElement {
                     tabs:{
                         main: {
                             label: 'Principal',
+                        },
+                        images: {
+                            label: 'Imágenes',
                         }
                     },
 
@@ -649,6 +875,35 @@ class Form extends HTMLElement {
                                             maxLength: 100,
                                             placeholder: '',
                                             required: true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        images: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        id:{
+                                            element: 'input',
+                                            type: 'hidden',
+                                        },
+                                        name: {
+                                            label: 'Nombre',
+                                            element: 'input',
+                                            maxLength: '10',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        email: {
+                                            label: 'Email',
+                                            element: 'input',
+                                            type: 'password',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'email'
                                         }
                                     }
                                 }

@@ -225,7 +225,7 @@ class Form extends HTMLElement {
                 justify-content: space-between;
                 width: 100%;
             }
-            
+
         </style>
         
         <div class="column">
@@ -256,7 +256,8 @@ class Form extends HTMLElement {
                         </div>
                         <div class="info-tabs-container-admin">
                         
-                        </div>    
+                        </div>   
+                    
                     </div>
                 </form>
             </div>
@@ -624,6 +625,1024 @@ class Form extends HTMLElement {
 
         switch (url) {
 
+            case '/api/admin/trolley-details':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    amount: {
+                                        label: 'Cantidad',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price: {
+                                        label: 'Precio',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },    
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    unit_mesure: {
+                                        label: 'Unidad de Medida',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    product_name: {
+                                        label: 'Nombre del Producto',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    iva_tipe: {
+                                        label: 'Tipo de IVA',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/taxes':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    type: {
+                                        label: 'Tipo',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    valid: {
+                                        label: 'Válido',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/sliders':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    name: {
+                                        label: 'Nombre',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/sales':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    reference: {
+                                        label: 'Referencia',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price_total: {
+                                        label: 'Precio Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },    
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    price_base_total: {
+                                        label: 'Precio Base Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price_iv_total: {
+                                        label: 'Precio IVA Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    emision_date: {
+                                        label: 'Hora de Emision',
+                                        element: 'input',
+                                        type: 'week',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                            row3: {
+                                formElements:{
+                                    emision_hour: {
+                                        label: 'Hora de Emision',  
+                                        element: 'input',
+                                        type: 'hour',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    iva_tipe: {
+                                        label: 'Tipo de IVA',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                            row4: {
+                                formElements:{
+                                    unit_mesure: {
+                                        label: 'Unidad de Medida',  
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    product_name: {
+                                        label: 'Nombre del Producto',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/sale-errors':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    code_error: {
+                                        label: 'Código de error',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    mesaje_error: {
+                                        label: 'Mensaje de error',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/sale-details':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    amount: {
+                                        label: 'Cantidad',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price: {
+                                        label: 'Precio',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },  
+                                    price_iva_total: {
+                                        label: 'Precio IVA Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },  
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    unit_mesure: {
+                                        label: 'Unidad de Medida',  
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    emision_date: {
+                                        label: 'Fecha de Emision',
+                                        element: 'input',
+                                        type: 'week',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    emision_hour: {
+                                        label: 'Hora de Emision',
+                                        element: 'input',
+                                        type: 'time',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                            row3: {
+                                formElements:{
+                                    product_name: {
+                                        label: 'Nombre del Producto',  
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    iva_tipe: {
+                                        label: 'Tipo de IVA',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/products':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    name: {
+                                        label: 'Nombre',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price: {
+                                        label: 'Precio',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    outstanding: {
+                                        label: 'Pendiente',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/product-categorys':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    name: {
+                                        label: 'Nombre',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/payments':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    references: {
+                                        label: 'Referencias',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price_total: {
+                                        label: 'Precio Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },  
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    price_base_total: {
+                                        label: 'Precio Base Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    emision_date: {
+                                        label: 'Fecha de Emision',
+                                        element: 'input',
+                                        type: 'week',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    emision_hour: {
+                                        label: 'Hora de Emision',
+                                        element: 'input',
+                                        type: 'time',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/payment-methods':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    option: {
+                                        label: 'Opcion',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    value: {
+                                        label: 'Valor',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/payment-details':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    amount: {
+                                        label: 'Cantidad',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    price: {
+                                        label: 'Precio',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },  
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    unit_mesure: {
+                                        label: 'Unidad de Medida',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    products_name: {
+                                        label: 'Nombre de Productos',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    iva_tipe: {
+                                        label: 'Tipo de Iva',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/menus':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    name: {
+                                        label: 'Nombre',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    customUrl: {
+                                        label: 'Url Personalizada',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    parentId: {
+                                        label: 'Parent Id',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+
+                                    },
+                                            
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/locales':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    lenguage: {
+                                        label: 'Lenguage',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    entity: {
+                                        label: 'Entidad',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    entityKey: {
+                                        label: 'Clave de la entidad',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    key : {
+                                        label: 'Clave',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    value: {
+                                        label: 'Valor',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/finguerprints':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    finguerprint: {
+                                        label: 'Finguerprint',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/faqs':
+
+            return {
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    answer: {
+                                        label: 'Respuesta',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    question: {
+                                        label: 'Pregunta',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
+
+            case '/api/admin/contacts':
+
+                return {
+
+                    tabs:{
+                        main: {
+                            label: 'Principal',
+                        }
+                    },
+
+                    tabsContent: {
+
+                        main: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        name: {
+                                            label: 'Nombre',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        surname: {
+                                            label: 'Surnames',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                    }
+                                },
+                                row2: {
+                                    formElements:{
+                                        email: {
+                                            label: 'Email',
+                                            element: 'input',
+                                            type: 'email',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'email'
+                                        },
+                                        phone: {
+                                            label: 'Telefono',
+                                            element: 'input',
+                                            type: 'number',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-numbers'
+                                        },
+                                    }
+                                },
+                                row3: {
+                                    formElements:{
+                                        message: {
+                                            label: 'Message',
+                                            element: 'textarea',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                    }
+                                }
+                            }
+                        }
+                    },
+                };
+
+            case '/api/admin/conpany-datas':
+
+                return {
+
+                    tabs:{
+                        main: {
+                            label: 'Principal',
+                        }
+                    },
+
+                    tabsContent: {
+
+                        main: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        name: {
+                                            label: 'Option',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        value: {
+                                            label: 'Value',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                    }
+                                }
+                            }
+                        }
+                    },
+                };
+
+            case '/api/admin/customer':
+
+                return {
+
+                    tabs:{
+                        main: {
+                            label: 'Principal',
+                        }
+                    },
+
+                    tabsContent: {
+
+                        main: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        name: {
+                                            label: 'Nombre',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        name: {
+                                            label: 'Apellidos',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                    }
+                                },
+                                row2: {
+                                    formElements:{
+                                        email: {
+                                            label: 'Email',
+                                            element: 'input',
+                                            type: 'email',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'email'
+                                        },
+                                        telefono: {
+                                            label: 'Teléfono',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'phone'
+                                        },
+                                        
+                                    }
+                                },
+                                row3: {
+                                    formElements:{
+                                        direccion: {
+                                            label: 'Dirección',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'address'
+                                        },
+                                        cp: {
+                                            label: 'Código Postal',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'cp'
+                                        },
+                                        ciudad: {
+                                            label: 'Poblacion',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                    }
+                                },
+                            }
+                        }
+                    }
+                } 
+            
+            
             case '/api/admin/users':
             
                 return {
@@ -829,7 +1848,7 @@ class Form extends HTMLElement {
                                         telefono: {
                                             label: 'Teléfono',
                                             element: 'input',
-                                            type: 'tel',
+                                            type: 'number',
                                             placeholder: '',
                                             required: true
                                         },

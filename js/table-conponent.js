@@ -8,6 +8,9 @@ class Table extends HTMLElement {
         this.url = this.getAttribute('url');
         this.edit = this.getAttribute('edit');
         this.data = [];
+        this.total = null;
+        this.pages = null;
+        this.currentPage = null;
     }
 
     static get observedAttributes() { return ['url']; }
@@ -28,9 +31,9 @@ class Table extends HTMLElement {
         this.loadData().then( () => this.render());
     }
 
-    async loadData() {
+    async loadData(pagination) {
 
-        let url = `${API_URL}${this.getAttribute('url')}`;
+        let url = pagination ? `${API_URL}${this.getAttribute('url')}?page=${pagination}`:`${API_URL}${this.getAttribute('url')}`;
 
         let result = await fetch(url,{  
             headers: {
@@ -40,6 +43,13 @@ class Table extends HTMLElement {
 
         let data = await result.json();
         this.data = data.rows;
+
+        console.log(data.meta);
+
+        this.total = data.meta.total;
+        this.pages = data.meta.pages;
+        this.currentPage = data.meta.currentPage;
+        this.lastPage = data.meta.pages;
     }
 
     render() {
@@ -112,11 +122,68 @@ class Table extends HTMLElement {
             margin-left: 2rem;
             padding: 0.5rem;    
         }
+
+        .table-pagination {
+            margin-top: 1em;
+            background-color: #b7b5b5;
+        }
+        
+        .table-pagination .table-pagination-info{
+            color: hsl(0, 0%, 0%);
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            justify-content: space-between;
+            
+        }
+
+        .table-pagination .table-pagination-buttons p{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 1rem 0;
+        }
+
+        .table-pagination-info p{
+            margin: 0;
+            color: white;
+        }
+    
+        .table-pagination .table-pagination-button{
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 1em;
+        }
+    
+        .table-pagination .table-pagination-button:hover{
+            color : #02A8B1;
+            font-weight: 600;
+        }
+    
+        .table-pagination .table-pagination-button.inactive{
+            color: hsl(0, 0%, 69%);
+        }
+
+        .table-pagination-buttons {
+            background-color: #b7b5b5;
+        }
         
         </style>
 
         <div class="table">
             
+        </div>
+        <div class="table-pagination">
+            <div class="table-pagination-info">
+                <div class="table-pagination-total"><p><span id="total-page">${this.total}</span> registros</p></div>
+                <div class="table-pagination-pages"><p>Página <span id="current-page">${this.currentPage}</span> de <span id="last-page">${this.lastPage}</span></p></div>
+            </div>
+            <div class="table-pagination-buttons">
+                <p>
+                    <span class="table-pagination-button" id="firstPageUrl">Primera</span>
+                    <span class="table-pagination-button" id="previousPageUrl">Anterior</span>
+                    <span class="table-pagination-button" id="nextPageUrl">Siguiente</span>
+                    <span class="table-pagination-button" id="lastPageUrl">Última</span>
+                </p>
+            </div>
         </div>
         `;	
 
@@ -156,6 +223,7 @@ class Table extends HTMLElement {
         });
 
         this.renderButtons();
+        this.renderPagination();
 
     }
     
@@ -191,10 +259,35 @@ class Table extends HTMLElement {
                 }));
             });
         });
+    }
 
-        
-        
-    }  
+    async renderPagination(pagination) {
+
+        let next = this.shadow.querySelector("#nextPageUrl");
+        let previous = this.shadow.querySelector("#previousPageUrl");
+        let first = this.shadow.querySelector("#firstPageUrl");
+        let last =  this.shadow.querySelector("#lastPageUrl");
+
+        next.addEventListener("click", () => {
+            if(this.currentPage < this.pages) {
+                this.loadData(parseInt(this.currentPage) + 1).then(() => this.render());
+            }
+        });
+
+        last.addEventListener("click", () => {
+            this.loadData(parseInt(this.pages)).then(() => this.render());
+        });
+
+        first.addEventListener("click", () => {
+            this.loadData(1).then(() => this.render());
+        });
+
+        previous.addEventListener("click", () => {
+            if(this.currentPage > 1) {
+                this.loadData(parseInt(this.currentPage) - 1).then(() => this.render());
+            }
+        });
+    }
 
     setTableStructure() {
 

@@ -53,6 +53,10 @@ class Delete extends HTMLElement {
                 z-index: 3000;
             }
 
+            body.active {
+                background-color: grey;
+            }
+
             .modal-container h3 {
                 align-self: center;
                 font-size: 1.4rem;
@@ -149,6 +153,7 @@ class Delete extends HTMLElement {
         let modal = this.shadow.querySelector('.modal-container');
 
         modal.classList.add('active');
+        
     }
 }
 

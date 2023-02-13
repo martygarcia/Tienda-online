@@ -8,7 +8,19 @@
 
 .admin-main {
     margin-top: 3vh;
-    height: 100vh;
+    min-height: 100vh;
+    width: 96%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .table{
+        width: 35%;
+    }
+
+    .form{
+        width: 60%;
+    }
 
     .ficha-info {
         margin-left: 2rem;

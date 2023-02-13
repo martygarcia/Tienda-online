@@ -1,3 +1,5 @@
+import  {API_URL} from '../config/config.js';
+
 class Form extends HTMLElement {
 
     constructor() {
@@ -8,10 +10,17 @@ class Form extends HTMLElement {
 
     static get observedAttributes() { return ['url']; }
 
+
     connectedCallback() {
         document.addEventListener("newUrl",( event =>{
             this.setAttribute('url', event.detail.url);
-        }));        
+        }));  
+
+        document.addEventListener("showElement",( event =>{
+            this.showElement(event.detail.id);
+            this.setAttribute('id', event.detail.id);
+            
+        }));   
     }
 
     attributeChangedCallback(name, oldValue, newValue){
@@ -25,12 +34,10 @@ class Form extends HTMLElement {
         `
         <style>
 
-        .tabs-form-admin {
-            background-color: white;
-            width: 95%;
-        }
-        
-            
+            .tabs-form-admin {
+                background-color: white;
+                width: %;
+            }
 
             svg {
                 cursor: pointer;
@@ -45,7 +52,7 @@ class Form extends HTMLElement {
                 width: 95%;
                 margin-top: 0.5vh;
                 display: flex;
-                justify-content: flex-end;
+                
             }
 
             .title-tabs-container-admin {
@@ -54,12 +61,11 @@ class Form extends HTMLElement {
             }
 
             .tabs-admin {
-                cursor: pointer;}
+                cursor: pointer;
+            }
         
             .tabs-side {
-        
                 display: flex;
-        
             }  
         
             span {
@@ -70,9 +76,13 @@ class Form extends HTMLElement {
             }
             
         
-            .tab-contents-admin{
+            .tab-panel{
                 display: none;
             } 
+
+            .tab-panel.active {
+                display: block;
+            }
     
             .info-tabs-container .active {
                 display: inline;
@@ -80,7 +90,7 @@ class Form extends HTMLElement {
         
             .info-tabs-container-admin {
                 margin-top: 2vh;
-                margin-left: 5rem;
+                padding: 2rem;
             }    
         
             label {
@@ -96,7 +106,9 @@ class Form extends HTMLElement {
                 margin-top: 1vh;
                 border: none;
                 padding: 0.2rem 10rem;
-                border-bottom: 2px solid #b7b5b5; }
+                border-bottom: 2px solid #b7b5b5; 
+                width: 100%;
+            }
         
         
             h4 {
@@ -126,50 +138,22 @@ class Form extends HTMLElement {
             .row {
                 display: flex;
                 justify-content: center;
+                gap: 2rem;
             }
 
             .form-element {
-                margin-right: 20rem;
                 margin-top: 3vh;
-            }
-
-            .row:nth-child(6) input {
-                padding: 0 60%;
-            }
-
-            .row:nth-child(5) input {
-                padding: 0 100%;
                 width: 100%;
             }
 
-            .row:nth-child(7) label {
-                font-size: 1.1rem;
+            .radio-container, .checkbox-container {
+                display: flex;
             }
-
-            .row:nth-child(7) div {
-                margin-right: 7rem;
-            }
-
-            .row:nth-child(7) input {
-                padding: 0 13%;
-            }
-
-            .row:nth-child(8) input {
-                pading: 0 0;
-            }
-
-            .row:last-child textarea {
-                padding: 3rem 20rem;
-            }
-
-        
-        // languages
         
             span {
                 cursor: pointer;
                 color: white;
                 font-weight: 600;
-                margin-left: -1rem;
                 padding: 1.06rem;
             }
 
@@ -208,12 +192,9 @@ class Form extends HTMLElement {
                 border: none;
                 border-bottom: #b7b5b5 solid 2px;
                 margin-top: 1vh;
-                padding-right: 60%;
+                width: 100%;
             }
 
-            textarea {
-            }
-    
             .contents-textarea-label {
     
                 margin-top: 2vh;
@@ -234,92 +215,17 @@ class Form extends HTMLElement {
             textarea  {
 
                 border: 2px solid #b7b5b5;
-                padding-right: 60%;
+                height: 10rem;
+                width: 100%;
             }
-                
-        
-            /* Columns */
 
-        .five-columns{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;  
-        }
-
-        .five-columns > .column{
-            width: 18%;
-        }  
-
-        .four-columns{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .four-columns > .column{
-            width: 22%;
-        }
-
-        .three-columns{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .three-columns > .column{
-            width: 30%;
-        }
-
-        .two-columns{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .two-columns > .column{
-            width: 48%;
-        }
-
-        .two-columns-aside{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .two-columns-aside > .column-aside{
-            width: 20%;
-        }
-
-        .two-columns-aside > .column-main{
-            width: 75%;
-        }
-
-        .one-column{
-            width: 100%;
-        }
-
-        .one-column > .column{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .table-text {
-            display: flex;
-        }
-
-        .table-text h5 {
-            margin-top: 0.5vh;
-        }
-
-        .table-text span {
-            margin-top: 0.7vh;
-        }
-
+            .two-columns{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+            }
+            
         </style>
         
         <div class="column">
@@ -327,9 +233,26 @@ class Form extends HTMLElement {
                 <form>
                     <div class="tabs-container-admin">
                         <div class="two-columns title-tabs-container-admin">
-                            <div class="tabs-side">
-                            
-                            </div>    
+                            <div class="column">
+                                <div class="tabs-side">
+                                
+                                </div>
+                            </div>  
+                            <div class="column">
+                                <div class="save-clean-on-off">
+                                <div class="send-form-button" id="img-save">
+                                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
+                                    </svg>
+                                </div>
+                                <div id="img-clean">
+                                    <svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,8.12C10.26,7.22 12.11,7.37 13.65,8.44L19.36,2.72M5.93,17.57C3.92,15.56 2.69,13.16 2.35,10.92L7.23,8.83L14.67,16.27L12.58,21.15C10.34,20.81 7.94,19.58 5.93,17.57Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
                         </div>
                         <div class="info-tabs-container-admin">
                         
@@ -593,6 +516,7 @@ class Form extends HTMLElement {
         }
 
         this.renderTabs();
+        this.renderButtons();
     }
 
     renderTabs = () => {
@@ -625,8 +549,74 @@ class Form extends HTMLElement {
             });
 
         });
-
     }
+
+    renderButtons = () => {
+
+        let save = this.shadow.querySelector("#img-save");
+        let reset = this.shadow.querySelector("#img-clean");
+        
+        save.addEventListener("click", () => {
+            
+            let url = this.getAttribute('id') ?  API_URL + this.getAttribute('url') + '/' + this.getAttribute('id')  : API_URL + this.getAttribute('url');
+            let method = this.getAttribute('id') ? "PUT" : "POST";
+
+            let form = this.shadow.querySelector('form');
+            let formData = new FormData(form);
+            let formDataJson = Object.fromEntries(formData.entries());
+    
+            fetch(url, {
+                method: method,
+                headers: {
+                    'Authorization': 'Bearer ' +  sessionStorage.getItem('accessToken'),
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formDataJson)
+            }).then(response => {
+                if(response.ok){
+
+                    this.render();
+                    document.dispatchEvent(new CustomEvent('refreshTable'));
+
+                }else{
+                    console.log(response);
+                }
+            }).catch(error => {
+                console.log(error);
+            });
+        });
+
+        reset.addEventListener("click", () => {
+            this.render();
+            this.setAttribute('id', '');
+        });
+    }  
+
+
+    showElement(id) {
+
+        let url = API_URL + this.getAttribute('url') + '/' + id;
+        
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' +  sessionStorage.getItem('accessToken'),
+            }
+        }).then(response => {
+            return response.json();
+        }).then(data => {
+                
+            for (let [key, value] of Object.entries(data)) {
+
+                if(this.shadow.querySelector('#' + key)){
+                    this.shadow.querySelector('#' + key).value = data[key];
+                }
+            }
+
+        }).catch(error => {
+            console.log(error);
+        });
+    }  
 
     setFormStructure = async () => {
         
@@ -635,6 +625,68 @@ class Form extends HTMLElement {
         switch (url) {
 
             case '/api/admin/users':
+            
+                return {
+
+                    tabs:{
+                        main: {
+                            label: 'Principal',
+                        }
+                    },
+                    
+                    tabsContent: {
+
+                        main: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        name: {
+                                            label: 'Nombre',
+                                            element: 'input',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        email: {
+                                            label: 'Email',
+                                            element: 'input',
+                                            type: 'email',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'email'
+                                        }
+                                    }
+                                },
+                                row2: {
+                                    formElements:{
+                                        password: {
+                                            label: 'Contraseña',
+                                            element: 'input',
+                                            type: 'password',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'password'
+                                        },
+                                        password_confirmation: {
+                                            label: 'Confirmar Contraseña',
+                                            element: 'input',
+                                            type: 'password',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'password'
+                                        }
+                                    }
+                                }
+
+                            }
+                    
+                        }
+                    }
+                }
+            
+
+            case '/api/admin/ejemplo':
 
                 return {
 
@@ -913,7 +965,8 @@ class Form extends HTMLElement {
                 }
             }
         };
-    
+        
+        
 }
 
 customElements.define('form-component', Form);

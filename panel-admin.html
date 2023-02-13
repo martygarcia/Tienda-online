@@ -25,18 +25,15 @@
             </div>
         </header>
         <main>
+            <delete-modal url="/api/admin/users"></delete-modal>
             <div class="admin-main">
-                <div class="two-columns-aside">
-                    <div class="column-aside">
-                        <table-component url="/api/admin/users"></table-component>
-                    </div>
-                    <div class="column-main">
-                        <form-component url="/api/admin/users"></form-component>
-                        </div>
-                    </div>
-                    <admin-notification></admin-notification>
-                    
+                <div class="table">
+                    <table-component url="/api/admin/users"></table-component>
                 </div>
+                <div class="form">
+                    <form-component url="/api/admin/users"></form-component>
+                </div>
+                <admin-notification></admin-notification> 
             </div>
         </main>
     </div>

@@ -11,6 +11,7 @@ import './notification-component.js';
 import './table-conponent.js';
 import './login-component.js';
 import './form-component.js';
+import './delete-conponent.js';
 
 renderContactForm();
 renderNotification();

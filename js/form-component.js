@@ -226,6 +226,22 @@ class Form extends HTMLElement {
                 width: 100%;
             }
 
+            .error {
+                color: red;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                opacity: 0;
+                position: absolute;
+                top: 20vh;
+            }
+
+            .error.active {
+                opacity: 1;
+                transition: all 0.5s ease;
+            }
+
         </style>
         
         <div class="column">
@@ -255,10 +271,13 @@ class Form extends HTMLElement {
 
                         </div>
                         <div class="info-tabs-container-admin">
-                        
+                            
+                        <p class="error">El formulario no esta correcto, revisalo</p>
                         </div>   
                     
                     </div>
+
+
                 </form>
             </div>
         </div>
@@ -520,6 +539,39 @@ class Form extends HTMLElement {
         this.renderButtons();
     }
 
+    validation = () => {
+
+        let inputs = this.shadow.querySelectorAll("input, textarea, select");
+        let error = this.shadow.querySelector(".error");
+
+        let validForm = true;
+    
+        let validators = {
+            "only-letters": /^[a-zA-Z\s]+$/g,
+            "only-numbers": /\d/g,
+            "telephone": /^\d{9}$/g,
+            "email": /\w+@\w+\.\w+/g,
+            "web": /^(http|https):\/\/\w+\.\w+/g,
+            "password": /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g,
+            "date": /^\d{4}-\d{2}-\d{2}$/g,
+            "time": /^\d{2}:\d{2}$/g
+        }
+
+
+        for (let i = 0; i < inputs.length; i++) {
+
+            if (inputs[i].dataset.validate && inputs[i].value.match(validators[inputs[i].dataset.validate]) == null) {
+                error.classList.add("active");
+                validForm = false;
+            }else{
+                validForm = true;
+            }
+        }
+        
+        return validForm;
+    }
+
+
     renderTabs = () => {
 
         this.shadow.querySelector(".tab-item").classList.add('active');
@@ -565,7 +617,14 @@ class Form extends HTMLElement {
             let form = this.shadow.querySelector('form');
             let formData = new FormData(form);
             let formDataJson = Object.fromEntries(formData.entries());
+
+            console.log("hoa")
+            if(!this.validation()){
+                return;
+            }
     
+            console.log("hoasss")
+
             fetch(url, {
                 method: method,
                 headers: {
@@ -624,6 +683,86 @@ class Form extends HTMLElement {
         let url = this.getAttribute('url');
 
         switch (url) {
+
+            case '/api/admin/books':
+
+            return {
+                
+
+                tabs:{
+                    main: {
+                        label: 'Principal',
+                    }
+                },
+
+                tabsContent: {
+
+                    main: {
+                        rows:{
+                            row1: {
+                                formElements:{
+                                    title: {
+                                        label: 'Titulo',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    author: {
+                                        label: 'Autor',
+                                        element: 'input',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },  
+                                }
+                            },
+                            row2: {
+                                formElements:{
+                                    isbn: {
+                                        label: 'ISBN',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    pageCount: {
+                                        label: 'Precio Base Total',
+                                        element: 'input',
+                                        type: 'number',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                    publishedDate: {
+                                        label: 'Fecha de Publicacion',
+                                        element: 'input',
+                                        type: 'date',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                            row3: {
+                                formElements:{
+                                    description: {
+                                        label: 'Descripcion',
+                                        element: 'textarea',
+                                        type: 'text',
+                                        placeholder: '',
+                                        required: true,
+                                        validate: 'only-letters'
+                                    },
+                                }
+                            },
+                        }
+                    },
+                }
+            };
 
             case '/api/admin/trolley-details':
 

@@ -318,13 +318,34 @@ class Table extends HTMLElement {
                     headers:{
                         type: {
                             label: 'Tipo',
-                        }
+                        },
+                        valid : {
+                            label: 'Válido',
+                        },
                     },
                     buttons: {
                         edit: true,
                         remove: true
                     }
                 };
+
+                case '/api/admin/books':
+    
+                    return {
+                        headers:{
+                            title: {
+                                label: 'Título',
+                            },
+                            author : {
+                                label: 'Autor',
+                            },
+                            buttons: {
+                                edit: true,
+                                remove: true
+                            }
+                        }
+                    }
+                            
         }
     };
 }
